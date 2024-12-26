@@ -1,0 +1,27 @@
+---
+import Arrow from "../assets/Icons/Arrow.astro";
+---
+
+<a
+  href="#home"
+  id="scroll-to-top"
+  class="z-50 opacity-0 fixed bottom-10 right-10 w-16 h-16 bg-secondary rounded-full shadow-lg justify-center items-center inline-flex cursor-pointer"
+>
+  <Arrow />
+</a>
+
+<script type="module">
+  const scrollToTopButton = document.getElementById("scroll-to-top");
+
+  function toggleVisibility() {
+    if (window.scrollY > 300) {
+      scrollToTopButton.classList.remove("opacity-0");
+      scrollToTopButton.classList.add("opacity-100");
+    } else {
+      scrollToTopButton.classList.remove("opacity-100");
+      scrollToTopButton.classList.add("opacity-0");
+    }
+  }
+
+  window.addEventListener("scroll", toggleVisibility);
+</script>
