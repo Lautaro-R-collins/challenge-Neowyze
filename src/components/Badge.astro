@@ -1,0 +1,14 @@
+---
+const { label, bgColor = "#FFFFFF", textColor = "#564376" } = Astro.props;
+---
+
+<div 
+  class="justify-center items-center gap-6 inline-flex 
+  p-3 bg-white rounded-[23px] 
+ md:h-16 md:px-8 md:py-3 md:rounded-[23px] md:justify-center 
+ md:items-center md:inline-flex md:text-base md:font-semibold md:font-['Manrope'] md:leading-10
+" 
+  style={`background-color: ${bgColor}; color: ${textColor};`}
+>
+  <span>{label}</span>
+</div>

@@ -1,0 +1,65 @@
+---
+
+const array = [
+    {
+        title: 'TEST a',
+        titleColor: 'text-secondary',
+        description: 'Buscamos la estética ideal para tu espacio comercial o particular, a través de productos y diseños innovadores que se ajusten a tu negocio o requerimiento. Logrando un ambiente relajado y lleno de vida. Las plantas contribuyen de manera importante al espacio interior, a través de la producción de oxígeno, la purificación del aire, y un efecto positivo para quienes las disfrutan.',
+    }
+]
+---
+
+<!-- test grid -->
+<section class="grid grid-cols-1 sm:grid-cols-2 px-[20px] sm:px-[140px] gap-8 py-10 bg-primary">
+    {array.map(item => {
+        <div class="flex flex-col">
+            <h3
+                class="self-stretch text-secondary text-2xl font-extrabold font-['Manrope'] uppercase tracking-[4.08px]"
+            >
+                {item.title}
+            </h3>
+            <p
+                class="self-stretch text-white text-[17px] font-medium font-['Manrope'] leading-10"
+            >
+                {item.description}
+            </p>
+        </div>
+    })}
+    <div class="flex flex-col">
+        <h3
+            class="self-stretch text-secondary text-2xl font-extrabold font-['Manrope'] uppercase tracking-[4.08px]"
+        >
+            {array[0].title}
+        </h3>
+        <p
+            class="self-stretch text-white text-[17px] font-medium font-['Manrope'] leading-10"
+        >
+            Buscamos la estética ideal para tu espacio comercial o particular, a
+            través de productos y diseños innovadores que se ajusten a tu
+            negocio o requerimiento. Logrando un ambiente relajado y lleno de
+            vida. Las plantas contribuyen de manera importante al espacio
+            interior, a través de la producción de oxígeno, la purificación del
+            aire, y un efecto positivo para quienes las disfrutan.
+        </p>
+    </div>
+    <div>
+        <h3
+            class="self-stretch text-secondary text-2xl font-extrabold font-['Manrope'] uppercase tracking-[4.08px]"
+        >
+            TEST b
+        </h3>
+        <p
+            class="self-stretch text-white text-[17px] font-medium font-['Manrope'] leading-10"
+        >
+            Buscamos la estética ideal para tu espacio comercial o particular, a
+            través de productos y diseños innovadores que se ajusten a tu
+            negocio o requerimiento. Logrando un ambiente relajado y lleno de
+            vida. Las plantas contribuyen de manera importante al espacio
+            interior, a través de la producción de oxígeno, la purificación del
+            aire, y un efecto positivo para quienes las disfrutan.
+        </p>
+        
+    </div>
+</section>
+
+<!-- ENd TEST -->

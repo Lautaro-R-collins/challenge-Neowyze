@@ -1,0 +1,132 @@
+---
+import "swiper/swiper-bundle.css";
+
+const data = [
+    {
+        img: "/src/assets/slider/slider-1.jpg",
+        title: "Organización de jardín en Olavarría.",
+        alt: "Imagen 1",
+    },
+    {
+        img: "/src/assets/slider/slider-2.jpg",
+        title: "Organización de jardín en Piedritas.",
+        alt: "Imagen 2",
+    },
+    {
+        img: "/src/assets/slider/slider-2.jpg",
+        title: "Organización de jardín en Piedritas.",
+        alt: "Imagen 3",
+    },
+    {
+        img: "/src/assets/slider/slider-2.jpg",
+        title: "Organización de jardín en Piedritas.",
+        alt: "Imagen 4",
+    },
+    {
+        img: "/src/assets/slider/slider-2.jpg",
+        title: "Organización de jardín en Piedritas.",
+        alt: "Imagen 5",
+    },
+];
+---
+
+<section
+    class="swiper-container 
+    
+    px-5 py-10 justify-start items-start gap-8
+    md:px-[140px] md:py-20 md:flex-col md:justify-start md:items-start md:gap-8"
+>
+    <h2
+        class="self-stretch text-primary text-2xl font-extrabold font-['Manrope'] uppercase tracking-[4.08px] mb-8"
+    >
+        NUESTROS TRABAJOS
+    </h2>
+
+    <div
+        class="swiper-wrapper h-[575px] justify-start items-center gap-8 inline-flex"
+    >
+        {
+            data.map((item) => (
+                <div class="swiper-slide min-w-max h-[575px] justify-center items-center inline-flex">
+                    <img
+                        src={item.img}
+                        alt="img 5"
+                        class="w-full h-[575px] object-cover rounded-lg shadow-lg"
+                    />
+                    <p class="self-stretch text-mutedText text-xl font-medium font-['Manrope'] leading-10">
+                        {item.title}
+                    </p>
+                </div>
+            ))
+        }
+    </div>
+
+    <!-- <div class="swiper-wrapper h-[575px] justify-start items-center gap-8 inline-flex">
+        <div class="swiper-slide w-[900px] h-[575px] justify-center items-center inline-flex">
+            <img
+                src="/src/assets/slider/slider-1.jpg"
+                alt="img 1"
+                class="w-[900px] self-stretch rounded-[10px] h-[575px]"
+            />
+            <p class="self-stretch text-mutedText text-xl font-medium font-['Manrope'] leading-10">Organización de jardín en Olavarría.</p>
+        </div>
+
+     
+        <div class="swiper-slide w-[700px] h-[575px] justify-center items-center inline-flex">
+            <img
+                src="/src/assets/slider/slider-2.jpg"
+                alt="img 2"
+                class="w-[700px] h-[575px] object-cover rounded-lg shadow-lg"
+            />
+            <p class="self-stretch text-mutedText text-xl font-medium font-['Manrope'] leading-10">Organización de jardín en Piedritas.</p>
+        </div>
+
+  
+        <div class="swiper-slide w-[600px] h-[575px] justify-center items-center inline-flex">
+            <img
+                src="/src/assets/slider/slider-3.jpg"
+                alt="img 3"
+                class="w-[600px] h-[575px] object-cover rounded-lg shadow-lg"
+            />
+            <p class="self-stretch text-mutedText text-xl font-medium font-['Manrope'] leading-10">Servicio de polinización.</p>
+        </div>
+
+ 
+        <div class="swiper-slide w-[700px] h-[575px] justify-center items-center inline-flex">
+            <img
+                src="/src/assets/slider/slider-4.jpg"
+                alt="img 4"
+                class="w-[700px] h-[575px] object-cover rounded-lg shadow-lg"
+            />
+            <p class="self-stretch text-mutedText text-xl font-medium font-['Manrope'] leading-10">Organización de jardín en Piedritas.</p>
+        </div>
+
+        <div class="swiper-slide w-[612px] h-[575px] justify-center items-center inline-flex">
+            <img
+                src="/src/assets/slider/slider-5.jpg"
+                alt="img 5"
+                class="w-[612px] h-[575px] object-cover rounded-lg shadow-lg"
+            />
+            <p class="self-stretch text-mutedText text-xl font-medium font-['Manrope'] leading-10">Muro verde en Villa Elisa.</p>
+        </div>
+    </div> -->
+</section>
+
+<script>
+    import Swiper from "swiper/bundle";
+
+    const swiper = new Swiper(".swiper-container", {
+        slidesPerView: 1,
+        loop: true,
+        // autoplay: {
+        //     delay: 1000,
+        // },
+        breakpoints: {
+            // Vercion mobil
+            375: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+        },
+    });
+</script>

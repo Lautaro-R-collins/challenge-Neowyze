@@ -1,0 +1,126 @@
+---
+import Carrusel from "../Carrusel.astro";
+import Button from "../Button.astro";
+import Badge from "../Badge.astro";
+---
+
+<!-- Seccion principal del about -->
+
+<section
+  id="about"
+  class="px-5 py-10 flex-col justify-center items-center gap-8 inline-flex
+  xxl:px-[140px] xxl:py-20 xxl:flex-col xxl:justify-start xxl:items-start xxl:gap-[50px]"
+>
+  <!-- Título -->
+  <h1
+    class="text-center text-[#564376] text-[64px] font-normal font-bebas tracking-[10.24px]
+    md:self-stretch md:text-secondary md:text-8xl md:font-normal md:font-bebas md:tracking-[15.36px]
+    xxl:text-left xxl:text-[80px] xxl:font-semibold xxl:tracking-[12px] xxl:mb-10"
+  >
+    SOBRE NOSOTROS
+  </h1>
+
+  
+  <div
+    class="self-stretch flex-col justify-center items-start gap-8 flex
+    md:self-stretch md:justify-start md:items-center md:gap-8 md:inline-flex
+    xxl:flex-row xxl:justify-start xxl:items-center"
+  >
+
+    <div class="grow shrink basis-0">
+      <img
+        src="/src/assets/desktop-sobrenosotros.png"
+        class="h-[300px] sm:src-['/src/assets/mobile-sobrenosotros.jpg'] sm:h-[522px] rounded-[10px] xxl:h-[522px]"
+        alt="Sobre Nosotros"
+      />
+    </div>
+
+    <div
+      class="self-stretch flex-col justify-center items-center gap-8 flex
+      md:grow md:shrink md:basis-0 md:flex md:flex-col md:justify-center md:items-start md:gap-8
+      xxl:items-start xxl:w-[50%]"
+    >
+      <h2
+        class="text-center text-[#929f36] text-2xl font-extrabold font-['Manrope'] uppercase tracking-[4.08px]
+        md:text-primary md:text-2xl md:font-extrabold md:font-['Manrope'] md:uppercase md:tracking-[4.08px]
+        xxl:text-left xxl:text-3xl xxl:font-extrabold xxl:tracking-[6px]"
+      >
+        ¿Por qué elegirnos?
+      </h2>
+
+      <p
+        class="text-center text-[#6e6e6e] text-base font-medium font-['Manrope'] leading-10
+        xxl:text-left xxl:text-lg xxl:leading-8"
+      >
+        Hoy en día los espacios verdes cumplen múltiples funciones, convirtiéndose en espacios de distensión, encuentro y conexión. Disfrutar de un espacio verde bien diseñado y mantenido es indispensable para sentirnos más plenos. No hay espacio que no pueda integrarse a la naturaleza. <br />
+        En <span class="font-bold">VERBENAS</span> te brindamos la posibilidad de darle vida a nuevos espacios verdes, generando un espacio estético, sostenible y disfrutable durante todo el año, haciendo de tu espacio un lugar único, a la altura de tus pretensiones y necesidades.
+      </p>
+      <Button/>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Vision y Mision -->
+<section class="px-5 py-10 bg-[#929f36] flex-col justify-start items-start gap-8 inline-flex overflow-hidden xxl:px-[140px] xxl:py-20 xxl:bg-primary xxl:flex-col xxl:justify-start xxl:items-start xxl:gap-8 xxl:inline-flex xxl:overflow-hidden">
+  
+  <!-- Contenedor de la misión y visión con dos columnas -->
+  <div class="xxl:flex xxl:gap-8">
+    <!-- Misión -->
+    <div class="xxl:w-1/2 flex flex-col gap-8">
+      <h2 class="text-center xxl:text-start text-white text-2xl font-extrabold font-['Manrope'] tracking-[4.08px]">
+        MISIÓN
+      </h2>
+      <p class="text-center xxl:text-start text-white text-base font-medium font-['Manrope'] leading-10">
+        Ofrecer un servicio exclusivo que permita cumplir las necesidades de los
+        clientes y reflejar las cualidades propias de los espacios. Generando
+        valor para el cliente, algo que conseguimos gracias a la calidad<br />y
+        excelencia de nuestros servicios. Poniendo a su disposición nuestro
+        equipo técnico y profesional rigurosamente seleccionado, formado y
+        especializado.
+      </p>
+    </div>
+
+    <!-- Visión -->
+    <div class="xxl:w-1/2 flex flex-col gap-8">
+      <h2 class="text-center xxl:text-start text-white text-2xl font-extrabold font-['Manrope'] tracking-[4.08px]">
+        VISIÓN
+      </h2>
+      <p class="text-center xxl:text-start text-white text-base font-medium font-['Manrope'] leading-10">
+        Ser líder en la prestación de servicios integrales de jardinería para
+        favorecer y mejorar las condiciones de vida de cada lugar. Contribuir al
+        desarrollo sustentable de las ciudades, recuperando y generando áreas
+        verdes habitables y estéticas que contribuyan a la biodiversidad y al
+        cambio climático.
+      </p>
+    </div>
+  </div>
+
+  <!-- Sección de Valores con los Badges -->
+  <div class="xxl:w-full flex flex-col gap-8">
+    <h2 class="text-center xxl:text-start text-white text-2xl font-extrabold font-['Manrope'] tracking-[4.08px]">
+      VALORES
+    </h2>
+    <div class="flex flex-wrap justify-center gap-6 items-center">
+      <Badge label="Cercanía" />
+      <Badge label="Profesionalismo" />
+      <Badge label="Responsabilidad social empresaria" />
+      <Badge label="Desarrollo Sustentable" />
+      <Badge label="Adaptabilidad" />
+      <Badge label="Orientación al cliente" />
+      <Badge label="Integridad" />
+    </div>
+  </div>
+
+</section>
+
+
+
+<!-- Carrusel -->
+<section>
+  <div class="relative overflow-hidden">
+    <Carrusel />
+  </div>
+</section>
