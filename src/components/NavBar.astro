@@ -1,0 +1,41 @@
+---
+const navLinks = [
+  { href: "#about", text: "Nosotros" },
+  { href: "#services", text: "Servicios" },
+  { href: "#imprint", text: "Impronta" },
+  { href: "#contact", text: "Contacto" },
+];
+---
+
+<nav
+  class="fixed z-50 top-7 left-1/2 transform -translate-x-1/2 gap-12
+        origin-top-left bg-gradient-to-r from-white to-[#edf0d9] backdrop-blur-md shadow-lg
+        rounded-[40px] w-[calc(100%-580px)] h-16 flex
+        items-center px-[30px] py-[10px] justify-between
+        mx-[240] mt-[40px]"
+>
+
+  <!-- Logo -->
+  <div>
+    <a href="/">
+    <img
+      src="/src/assets/logo-verbena-white.png"
+      alt="logo"
+      class="w-auto h-[53px]"/>
+    </a>
+  </div>
+
+  <!-- Enlaces -->
+  <div class="flex gap-6 text-secondary">
+    {navLinks.map((link) => (
+      <a
+        href={link.href}
+        class="relative px-3 py-2 text-purple after:content-[''] after:block after:h-[2px] after:w-0 after:bg-secondary after:transition-all hover:after:w-full"
+      >
+        {link.text}
+      </a>
+    ))}
+  </div>
+</nav> 
+
+
