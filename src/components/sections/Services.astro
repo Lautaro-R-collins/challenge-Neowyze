@@ -1,25 +1,25 @@
 ---
 //imports de componentes card
-import SectionComponentGreen from '../cardSectionGreen.astro';
-import SectionComponentWhite from '../cardSectionWhite.astro';
+import SectionComponentGreen from "../cardSectionGreen.astro";
+import SectionComponentWhite from "../cardSectionWhite.astro";
 
 // imports imagenes mobile
-import MobileSer1 from '/src/assets/Mobile-servicios/mobile-servicios-1.png';
-import MobileSer2 from '/src/assets/Mobile-servicios/mobile-servicios-2.png';
-import MobileSer3 from '/src/assets/Mobile-servicios/mobile-servicios-3.png';
-import MobileSer4 from '/src/assets/Mobile-servicios/mobile-servicios-4.png';
-import MobileSer5 from '/src/assets/Mobile-servicios/mobile-servicios-5.png';
+import MobileSer1 from "/src/assets/Mobile-servicios/mobile-servicios-1.png";
+import MobileSer2 from "/src/assets/Mobile-servicios/mobile-servicios-2.png";
+import MobileSer3 from "/src/assets/Mobile-servicios/mobile-servicios-3.png";
+import MobileSer4 from "/src/assets/Mobile-servicios/mobile-servicios-4.png";
+import MobileSer5 from "/src/assets/Mobile-servicios/mobile-servicios-5.png";
 
 // imports imagenes desktop
-import DesktopSer1 from '/src/assets/servicios.img/desktop-servicios-1.jpg';
-import DesktopSer2 from '/src/assets/servicios.img/desktop-servicios-2.jpg';
-import DesktopSer3 from '/src/assets/servicios.img/desktop-servicios-3.jpg';
-import DesktopSer4 from '/src/assets/servicios.img/desktop-servicios-4.jpg';
-import DesktopSer5 from '/src/assets/servicios.img/desktop-servicios-5.jpg';
+import DesktopSer1 from "/src/assets/servicios.img/desktop-servicios-1.jpg";
+import DesktopSer2 from "/src/assets/servicios.img/desktop-servicios-2.jpg";
+import DesktopSer3 from "/src/assets/servicios.img/desktop-servicios-3.jpg";
+import DesktopSer4 from "/src/assets/servicios.img/desktop-servicios-4.jpg";
+import DesktopSer5 from "/src/assets/servicios.img/desktop-servicios-5.jpg";
 ---
 
 <div
-    class=" text-center  text-[#564376] text-[64px] font-normal font-bebas tracking-[10.24px]
+    class="text-center text-[#564376] text-[64px] font-normal font-bebas tracking-[10.24px]
     xlg:text-left xlg:text-[80px] xlg:font-semibold xlg:tracking-[12px] xlg:px-[100px]
 xxl:text-left xxl:text-[80px] xxl:font-semibold xxl:tracking-[12px] xxl:px-[140px]"
 >
@@ -27,51 +27,48 @@ xxl:text-left xxl:text-[80px] xxl:font-semibold xxl:tracking-[12px] xxl:px-[140p
 </div>
 
 <SectionComponentWhite
-  title="EXTERIORES > DISEÑO"
-  text={`El equipo de <span class='font-bold'>VERBENAS</span> es especialista en diseño de jardines y parques, haciendo de la estética y del bienestar nuestro lema. Contamos con diversidad de opciones para adecuarse a su necesidad, con un servicio totalmente personalizado y enfocado exclusivamente a sus requerimientos. Desarrollamos espacios que sean estéticos y disfrutables todo el año. Elaboramos planes de mantenimiento específicos para cada espacio verde, planificando y optimizando los recursos, tanto humanos como técnicos. Buscamos los mayores estándares de desempeño para el mantenimiento de espacios verdes considerando tanto su buen estado estructural y fitosanitario, como aspectos estéticos de la vegetación, garantizando el aspecto y la salud de césped, árboles, plantas, flores y entorno.`}
-  boldText="VERBENAS"
-  mobileImage={MobileSer1.src}
-  desktopImage={DesktopSer1.src}
-  altText="Diseño de exteriores"
+    title="EXTERIORES > DISEÑO"
+    text={`El equipo de VERBENAS es especialista en diseño de jardines y parques, haciendo de la estética y del bienestar nuestro lema. Contamos con diversidad de opciones para adecuarse a su necesidad, con un servicio totalmente personalizado
+y enfocado exclusivamente a sus requerimientos. Desarrollando espacios que sean estéticos y disfrutables todo el año. Elaboramos planes de mantenimiento específicos para cada espacio verde, planificando y optimizando los recursos, tanto humanos como técnicos. Buscamos los mayores estándares de desempeño para el mantenimiento de espacios verdes considerando tanto su buen estado estructural y fitosanitario, como aspectos estéticos de la vegetación, garantizando el aspecto y la salud de césped, arboles, plantas, flores y entorno.`}
+    boldText="VERBENAS"
+    mobileImage={MobileSer1.src}
+    desktopImage={DesktopSer1.src}
+    altText="Diseño de exteriores"
 />
 
 <SectionComponentGreen
-title="Terrazas verdes > DISEÑO Y MANTENIMIENTO"
-text="Las terrazas, sobre todo en grandes urbanizaciones como Buenos Aires, suelen ser espacios comunes desaprovechados. Una terraza verde, además de sus muchos beneficios en cuanto al ecosistema, es una solución que da vida, incorpora vanguardia y pone en valor al espacio para el descanso, la sociabilización y la conexión de los habitantes con la naturaleza y su biodiversidad, transformando un espacio desaprovechado en un punto de encuentro para compartir, con beneficios recreativos, estéticos, ambientales y sociales."
-boldText="En VERBENAS nuestros especialistas te pueden brindar distintas soluciones para generar de tu terraza o patio urbano, un espacio verde disfrutable."
-mobileImage={MobileSer2.src}
-desktopImage={DesktopSer2.src}
-altText="Diseño de exteriores"
+    title="Terrazas verdes > DISEÑO Y MANTENIMIENTO"
+    text="Las terrazas, sobre todo en grandes urbanizaciones como Buenos Aires, suelen ser espacios comunes desaprovechados. Una terraza verde, además de sus muchos beneficios en cuanto al ecosistema, es una solución que da vida, incorpora vanguardia y pone en valor al espacio para el descanso, la sociabilización y la conexión de los habitantes con la naturaleza y su biodiversidad, transformando un espacio desaprovechado en un punto de encuentro para compartir, con beneficios recreativos, estéticos, ambientales y sociales."
+    boldText="En VERBENAS nuestros especialistas te pueden brindar distintas soluciones para generar de tu terraza o patio urbano, un espacio verde disfrutable."
+    mobileImage={MobileSer2.src}
+    desktopImage={DesktopSer2.src}
+    altText="Diseño de exteriores"
 />
 
 <SectionComponentWhite
-  title="Muros verdes y Jardines verticales > DISEÑO y MANTENIMIENTO"
-  text={`Los muros verdes constituyen uno de los enfoques más utilizados para generar espacios verdes en zonas urbanas. Una pared verde, en cualquier ambiente, a través de sus texturas, colores y fluidez se convierte en un elemento decorativo que hace resaltar el espacio, convirtiendo a los jardines verticales en un estilo ideal de bienestar y belleza para integrar la naturaleza y sus beneficios. Diseñamos muros verdes y jardines verticales, de interior y exterior, de acuerdo a su necesidad, con un amplio abanico de posibilidades, plantas verdes, flores o distintos tipos de musgos. Solo es necesario un muro para transformar tu ambiente.`}
-  boldText="Muros verdes y Jardines verticales"
-  mobileImage={MobileSer3.src}
-  desktopImage={DesktopSer3.src}
-  altText="Diseño de exteriores"
+    title="Muros verdes y Jardines verticales > DISEÑO y MANTENIMIENTO"
+    text={`Los muros verdes constituyen uno de los enfoques más utilizados para generar espacios verdes en zonas urbanas. Una pared verde, en cualquier ambiente, a través de sus texturas, colores y fluidez se convierte en un elemento decorativo que hace resaltar el espacio, convirtiendo a los jardines verticales en un estilo ideal de bienestar y belleza para integrar la naturaleza y sus beneficios. Diseñamos muros verdes y jardines verticales, de interior y exterior, de acuerdo a su necesidad, con un amplio abanico de posibilidades, plantas verdes, flores o distintos tipos de musgos. Solo es necesario un muro para transformar tu ambiente.`}
+    boldText="Muros verdes y Jardines verticales"
+    mobileImage={MobileSer3.src}
+    desktopImage={DesktopSer3.src}
+    altText="Diseño de exteriores"
 />
-
 
 <SectionComponentGreen
-  title="INTERIORES > DISEÑO Y MANTENIMIENTO"
-  text="Ofrecemos asesoramiento e ideas para mejorar y decorar sus espacios interiores, a través de la colocación de elementos naturales, ocupándonos del suministro de todos los materiales necesarios, adecuándonos al espacio y a sus requerimientos. Los espacios interiores pueden mejorar con una decoración adecuada. Únicamente con  la colocación de elementos naturales podemos cambiar la estética y el entorno de un espacio interior, mejorando el bienestar ambiental del entorno. A través de nuestro servicio de mantenimiento nos aseguramos que cada planta reciba la atención y el cuidado necesarios para que conserven el mejor aspecto durante todo el año. Nuestro equipo de jardineros profesionales cuenta con el conocimiento y experiencia para cubrir todos  los requerimientos y características específicas de cada especie."
-  boldText="Ofrecemos asesoramiento e ideas para mejorar y decorar sus espacios interiores, a través de la colocación de elementos naturales."
-  mobileImage={MobileSer4.src}
-  desktopImage={DesktopSer4.src}
-  altText="Diseño de interiores"
+    title="INTERIORES > DISEÑO Y MANTENIMIENTO"
+    text="Ofrecemos asesoramiento e ideas para mejorar y decorar sus espacios interiores, a través de la colocación de elementos naturales, ocupándonos del suministro de todos los materiales necesarios, adecuándonos al espacio y a sus requerimientos. Los espacios interiores pueden mejorar con una decoración adecuada. Únicamente con  la colocación de elementos naturales podemos cambiar la estética y el entorno de un espacio interior, mejorando el bienestar ambiental del entorno. A través de nuestro servicio de mantenimiento nos aseguramos que cada planta reciba la atención y el cuidado necesarios para que conserven el mejor aspecto durante todo el año. Nuestro equipo de jardineros profesionales cuenta con el conocimiento y experiencia para cubrir todos  los requerimientos y características específicas de cada especie."
+    boldText="Ofrecemos asesoramiento e ideas para mejorar y decorar sus espacios interiores, a través de la colocación de elementos naturales."
+    mobileImage={MobileSer4.src}
+    desktopImage={DesktopSer4.src}
+    altText="Diseño de interiores"
 />
 
 <SectionComponentWhite
-  title="Huertas > VERBENAS"
-  text={`Las huertas urbanas vinculan a las poblaciones con la naturaleza y la posibilidad de tener sus propios cultivos. En <span class='font-bold'>VERBENAS</span> trabajamos con <span class="font-bold">VIVIERO-HUERTA</span>, que nació de la iniciativa de vecinas del Barrio Rodrigo Bueno como una búsqueda de rescatar los conocimientos y las prácticas culturales de las tierras originales. Hoy, es un espacio autogestivo donde se cultivan alimentos, plantas orgánicas y nativas.<br />Trabajamos con las mejores manos del VIVIERO-HUERTA para que cuentes con plantas y semillas totalmente orgánicas, además de ofrecerte capacitación para mantenerlas frescas y saludables. Nuestra responsabilidad social empresarial se focaliza en tres vertientes: cuidado al medio ambiente, condiciones laborales de sus trabajadores y apoyo a las causas humanitarias.`}
-  boldText="VERBENAS"
-  mobileImage={MobileSer5.src}
-  desktopImage={DesktopSer5.src}
-  altText="Diseño de huertas urbanas"
+    title="Huertas > VERBENAS"
+    text={`Las huertas urbanas vinculan a las poblaciones con la naturaleza y la posibilidad de tener sus propios cultivos. En VERBENAS trabajamos con VIVIERO-HUERTA, que nació de la iniciativa de vecinas del Barrio Rodrigo Bueno como una búsqueda de rescatar los conocimientos y las prácticas culturales de las tierras originales. Donde hoy, es espacio autogestivo donde se cultivan alimentos, plantas orgánicas y nativas.
+    Trabajamos con las mejores manos del VIVERO-HUERTA para que cuentes con plantas y semillas totalmente orgánicas y con la capacitación del formidable equipo que te enseñará a mantenerla fresca y saludable. Nuestra responsabilidad social empresarial se focaliza, en tres vertientes: cuidado al medio ambiente, condiciones laborales de sus trabajadores y apoyo a las causas humanitarias.`}
+    boldText="VERBENAS"
+    mobileImage={MobileSer5.src}
+    desktopImage={DesktopSer5.src}
+    altText="Diseño de huertas urbanas"
 />
-
-
-
-
