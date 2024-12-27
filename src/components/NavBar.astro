@@ -14,26 +14,29 @@ const navLinks = [
         items-center px-[30px] py-[10px] justify-between
         mx-[240] mt-[40px]"
 >
-
   <!-- Logo -->
   <div>
     <a href="/">
-    <img
-      src="/src/assets/logo-verbena-white.png"
-      alt="logo"
-      class="w-auto h-[53px]"/>
+      <img
+        src="/src/assets/logo-verbena-white.png"
+        alt="logo"
+        class="w-auto h-[53px]"
+      />
     </a>
   </div>
 
   <!-- Enlaces -->
   <div class="flex gap-6 text-secondary">
-    {navLinks.map((link) => (
-      <a
-        href={link.href}
-        class="relative px-3 py-2 text-purple after:content-[''] after:block after:h-[2px] after:w-0 after:bg-secondary after:transition-all hover:after:w-full"
-      >
-        {link.text}
-      </a>
-    ))}
+    {
+      navLinks.map((link) => (
+        <a
+          href={link.href}
+          class="relative px-3 py-2 text-purple after:content-[''] after:block after:h-[2px] after:w-0 after:bg-secondary after:transition-all hover:after:w-full"
+        >
+          {link.text}
+        </a>
+      ))
+    }
   </div>
-</nav> 
+</nav>
+
