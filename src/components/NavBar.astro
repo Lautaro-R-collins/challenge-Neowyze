@@ -1,4 +1,7 @@
 ---
+import MenuIconClose from "../assets/Icons/MenuIconClose.astro";
+import MenuIconOpen from "../assets/Icons/MenuIconOpen.astro";
+
 const navLinks = [
   { href: "#about", text: "Nosotros" },
   { href: "#services", text: "Servicios" },
@@ -8,13 +11,11 @@ const navLinks = [
 ---
 
 <nav
-  class="fixed z-50 top-7 left-1/2 transform -translate-x-1/2 gap-12
-        origin-top-left bg-gradient-to-r from-white to-[#edf0d9] backdrop-blur-md shadow-lg
-        rounded-[40px] w-[calc(100%-580px)] h-16 flex
-        items-center px-[30px] py-[10px] justify-between
-        mx-[240] mt-[40px]"
+  class="hidden sm:flex fixed z-50 top-7 left-1/2 transform -translate-x-1/2 gap-12
+origin-top-left bg-gradient-to-r from-white to-[#edf0d9] backdrop-blur-md shadow-lg
+rounded-[40px] w-[calc(100%-580px)] h-16 items-center px-[30px] py-[10px] justify-between
+mt-[40px]"
 >
-  <!-- Logo -->
   <div>
     <a href="/">
       <img
@@ -25,8 +26,7 @@ const navLinks = [
     </a>
   </div>
 
-  <!-- Enlaces -->
-  <div class="flex gap-6 text-secondary">
+  <div class="hidden md:flex gap-6 text-secondary">
     {
       navLinks.map((link) => (
         <a
@@ -40,3 +40,67 @@ const navLinks = [
   </div>
 </nav>
 
+<!-- menu amburguesa -->
+
+<button
+  id="menu-toggle"
+  class="fixed top-4 left-4 font-bold py-2 px-4 block sm:hidden"
+>
+  <MenuIconOpen />
+</button>
+
+<div
+  id="mobile-menu"
+  class="hidden fixed inset-0 z-40 flex flex-col items-center justify-center bg-gradient-to-r from-white to-[#edf0d9]"
+>
+  <button
+    id="close-menu"
+    class="absolute top-4 right-4 text-secondary font-bold py-2 px-4 "
+  >
+    <MenuIconClose />
+  </button>
+
+  <ul class="flex flex-col gap-8 text-secondary text-2xl font-bold">
+    {
+      navLinks.map((link) => (
+        <li>
+          <a href={link.href}>
+            {link.text}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+  <img
+    src="/src/assets/logo-verbena-white.png"
+    alt="Logo"
+    class="mt-12 w-[150px] h-auto"
+  />
+</div>
+
+<script>
+  const toggleButton = document.querySelector("#menu-toggle");
+  const mobileMenu = document.querySelector("#mobile-menu");
+  const closeMenuButton = document.querySelector("#close-menu");
+  const menuLinks = document.querySelectorAll("#mobile-menu a");
+
+  if (toggleButton && mobileMenu) {
+    toggleButton.addEventListener("click", () => {
+      mobileMenu.classList.remove("hidden");
+    });
+  }
+
+  if (closeMenuButton && mobileMenu) {
+    closeMenuButton.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden");
+    });
+  }
+
+  if (menuLinks.length > 0 && mobileMenu) {
+    menuLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    });
+  }
+</script>
