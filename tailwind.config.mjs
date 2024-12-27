@@ -8,7 +8,7 @@ export default {
 				manrope: ['"Manrope"', 'sans-serif'],
 			},
 			screens: {
-				'sm': '550px',      
+				'sm': '376px',      
 				'md': '768px',      
 				'lg': '1024px',     
 				'xl': '1280px',   
