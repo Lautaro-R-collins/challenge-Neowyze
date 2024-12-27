@@ -1,0 +1,56 @@
+---
+export interface Props {
+    title: string;
+    text: string;
+    boldText: string;
+    mobileImage: string;
+    desktopImage: string;
+    altText: string;
+}
+
+const { title, text, boldText, mobileImage, desktopImage, altText } =
+    Astro.props;
+---
+
+<section
+    id="services"
+    class="px-5 py-10 text-center justify-center items-center gap-8 inline-flex xlg:px-[100px] xxl:px-[140px]"
+>
+    <div
+        class="flex flex-col xlg:flex-row-reverse xxl:flex-row-reverse items-center gap-8"
+    >
+        <div
+            class="flex flex-col text-center items-start gap-8 xlg:text-start xxl:text-start"
+        >
+            <!-- Título -->
+            <h2
+                class="self-stretch text-primary text-2xl font-extrabold font-['Manrope'] uppercase tracking-[4.08px]"
+            >
+                {title}
+            </h2>
+
+            <!-- Texto -->
+            <p
+                class="self-stretch text-mutedText text-base font-medium font-['Manrope'] leading-10 xxl:text-lg xxl:leading-8"
+            >
+                {text}
+            </p>
+        </div>
+
+        <div class="flex justify-center items-center">
+            <picture
+                class="xxl:w-[400px] xxl:h-[400px] xlg:w-[400px] xlg:h-[400px] rounded-[10px]"
+            >
+                <!-- Imagen para dispositivos móviles -->
+                <source srcset={mobileImage} media="(max-width: 640px)" />
+                <!-- Imagen para dispositivos mayores a 640px -->
+                <source srcset={desktopImage} media="(min-width: 641px)" />
+                <img
+                    src={desktopImage}
+                    class="w-[400px] h-[400px] rounded-[10px]"
+                    alt={altText}
+                />
+            </picture>
+        </div>
+    </div>
+</section>
