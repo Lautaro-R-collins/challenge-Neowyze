@@ -1,4 +1,6 @@
 ---
+import SectionComponent from '../cardSectionGreen.astro';
+
 // imports imagenes mobile
 import MobileSer1 from '/src/assets/Mobile-servicios/mobile-servicios-1.png';
 import MobileSer2 from '/src/assets/Mobile-servicios/mobile-servicios-2.png';
@@ -82,69 +84,18 @@ xxl:text-left xxl:text-[80px] xxl:font-semibold xxl:tracking-[12px] xxl:px-[140p
 </section>
 
 
-<section
-    class="px-5 py-10 bg-primary flex-col justify-start items-center gap-8 inline-flex
-    xlg:px-[100px] xlg:flex-row-reverse xlg:justify-end
-    xxl:px-[140px] xxl:flex-row-reverse xxl:justify-end"
->
-    <div class="flex justify-center items-center">
-        <picture class=" xxl:w-[400px] xxl:h-[400px] xlg:w-[400px] xlg:h-[400px] rounded-[10px]">
-            <!-- Imagen para dispositivos móviles -->
-            <source
-                srcset={MobileSer2.src}
-                media="(max-width: 640px)"
-            />
-            <!-- Imagen para dispositivos mayores a 640px -->
-            <source
-                srcset={DesktopSer2.src}
-                media="(min-width: 641px)"
-            />
-            <img
-                src={DesktopSer2.src}
-                class="w-[400px] h-[400px] rounded-[10px]"
-                alt="Diseño de exteriores"
-            />
-        </picture>
-    </div>
+<!-- test -->
+<SectionComponent
+title="Terrazas verdes > DISEÑO Y MANTENIMIENTO"
+text="Las terrazas, sobre todo en grandes urbanizaciones como Buenos Aires, suelen ser espacios comunes desaprovechados. Una terraza verde, además de sus muchos beneficios en cuanto al ecosistema, es una solución que da vida, incorpora vanguardia y pone en valor al espacio para el descanso, la sociabilización y la conexión de los habitantes con la naturaleza y su biodiversidad, transformando un espacio desaprovechado en un punto de encuentro para compartir, con beneficios recreativos, estéticos, ambientales y sociales."
+boldText="En VERBENAS nuestros especialistas te pueden brindar distintas soluciones para generar de tu terraza o patio urbano, un espacio verde disfrutable."
+mobileImage={MobileSer2.src}
+desktopImage={DesktopSer2.src}
+altText="Diseño de exteriores"
+/>
+<!-- endtest -->
 
-    <div
-        class="grow shrink basis-0 flex-col justify-center items-start gap-8 inline-flex"
-    >
-        <!-- Título -->
-        <h2
-            class="text-center self-stretch text-secondary text-2xl font-extrabold
-            font-['Manrope'] uppercase tracking-[4.08px] xlg:text-start xxl:text-start"
-        >
-            Terrazas verdes > DISEÑO Y MANTENIMIENTO
-        </h2>
-        <!-- Texto -->
-        <p class="self-stretch text-center xlg:text-start xxl:text-start">
-            <span
-                class="text-white text-base font-medium font-['Manrope'] leading-10"
-                >Las terrazas, sobre todo en grandes urbanizaciones como Buenos
-                Aires, suelen ser espacios comunes desaprovechados. Una terraza
-                verde, además de sus muchos beneficios en cuanto al ecosistema,
-                es una solución que da vida, incorpora vanguardia y pone en
-                valor al espacio para el descanso, la sociabilización y la
-                conexión de los habitantes con la naturaleza y su biodiversidad,
-                transformando un espacio desaprovechado en un punto de encuentro
-                para compartir, con beneficios recreativos, estéticos,
-                ambientales y sociales.
-            </span>
-            <span
-                class="text-white text-base font-bold font-['Manrope'] leading-10"
-                >En VERBENAS nuestros especialistas te pueden brindar distintas
-                soluciones para generar de tu terraza o patio urbano, un espacio
-                verde disfrutable.</span
-            >
-        </p>
-    </div>
-    <!-- <img
-        src="/src/assets/vectors/fern-white.svg"
-        alt="monstera"
-        class="absolute -z-1 w-[524px] -ml-[350px] md:w-[624px] md:-ml-[450px]"
-    /> -->
-</section> 
+
 
 <section
     class="px-5 py-10 text-center justify-center items-center gap-8 inline-flex xlg:px-[100px] xxl:px-[140px]"
@@ -203,69 +154,18 @@ xxl:text-left xxl:text-[80px] xxl:font-semibold xxl:tracking-[12px] xxl:px-[140p
     </div>
 </section>
 
-<section
-    class="px-5 py-10 bg-primary flex-col justify-start items-center gap-8 inline-flex
-    xlg:px-[90px] xlg:flex-row-reverse xlg:justify-end
-    xxl:px-[140px] xxl:flex-row-reverse xxl:justify-end"
->
-    <div class="flex justify-center items-center">
-        <picture class="xxl:w-[400px] xxl:h-[400px] xlg:w-[400px] xlg:h-[400px] rounded-[10px]">
-            <!-- Imagen para dispositivos móviles -->
-            <source
-                srcset={MobileSer4.src}
-                media="(max-width: 640px)"
-            />
-            <!-- Imagen para dispositivos mayores a 640px -->
-            <source
-                srcset={DesktopSer4.src}
-                media="(min-width: 641px)"
-            />
-            <img
-                src={DesktopSer4.src}
-                class="w-[400px] h-[400px] rounded-[10px]"
-                alt="Diseño de exteriores"
-            />
-        </picture>
-    </div>
 
-    <div
-        class="grow shrink basis-0 flex-col justify-center items-start gap-8 inline-flex"
-    >
-        <!-- Título -->
-        <h2
-            class="text-center self-stretch text-secondary text-2xl font-extrabold
-            font-['Manrope'] uppercase tracking-[4.08px] xlg:tracking-[2.08px] xlg:text-start xxl:text-start"
-        >
-            INTERIORES > DISEÑO Y MANTENIMIENTO
-        </h2>
-        <!-- Texto -->
-        <p class="self-stretch text-center xlg:text-start xxl:text-start">
-            <span
-                class="text-white text-base font-medium font-['Manrope'] leading-10"
-            >
-                Ofrecemos asesoramiento e ideas para mejorar y decorar sus
-                espacios interiores, a través de la colocación de elementos
-                naturales, ocupándonos del suministro de todos los materiales
-                necesarios, adecuándonos al espacio y a sus requerimientos. Los
-                espacios interiores pueden mejorar con una decoración adecuada.
-                Únicamente con la colocación de elementos naturales podemos
-                cambiar la estética y el entorno de un espacio interior,
-                mejorando el bienestar ambiental del entorno. A través de
-                nuestro servicio de mantenimiento nos aseguramos que cada planta
-                reciba la atención y el cuidado necesarios para que conserven el
-                mejor aspecto durante todo el año. Nuestro equipo de jardineros
-                profesionales cuenta con el conocimiento y experiencia para
-                cubrir todos los requerimientos y características específicas de
-                cada especie.
-            </span>
-        </p>
-    </div>
-    <!-- <img
-        src="/src/assets/vectors/fern-white.svg"
-        alt="monstera"
-        class="absolute -z-1 w-[524px] -ml-[350px] md:w-[624px] md:-ml-[450px]"
-    /> -->
-</section>
+<SectionComponent
+  title="INTERIORES > DISEÑO Y MANTENIMIENTO"
+  text="Ofrecemos asesoramiento e ideas para mejorar y decorar sus espacios interiores, a través de la colocación de elementos naturales, ocupándonos del suministro de todos los materiales necesarios, adecuándonos al espacio y a sus requerimientos. Los espacios interiores pueden mejorar con una decoración adecuada. Únicamente con  la colocación de elementos naturales podemos cambiar la estética y el entorno de un espacio interior, mejorando el bienestar ambiental del entorno. A través de nuestro servicio de mantenimiento nos aseguramos que cada planta reciba la atención y el cuidado necesarios para que conserven el mejor aspecto durante todo el año. Nuestro equipo de jardineros profesionales cuenta con el conocimiento y experiencia para cubrir todos  los requerimientos y características específicas de cada especie."
+  boldText="Ofrecemos asesoramiento e ideas para mejorar y decorar sus espacios interiores, a través de la colocación de elementos naturales."
+  mobileImage={MobileSer4.src}
+  desktopImage={DesktopSer4.src}
+  altText="Diseño de interiores"
+/>
+
+
+
 
 <section
     class="px-5 py-10 text-center justify-center items-center gap-8 inline-flex xxl:px-[140px] xlg:px-[90px]"
@@ -326,3 +226,5 @@ xxl:text-left xxl:text-[80px] xxl:font-semibold xxl:tracking-[12px] xxl:px-[140p
         </div>
     </div>
 </section>
+
+

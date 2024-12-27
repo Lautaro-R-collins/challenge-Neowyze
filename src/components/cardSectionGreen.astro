@@ -1,0 +1,53 @@
+---
+// Recibimos las props
+export interface Props {
+  title: string;
+  text: string;
+  boldText: string;
+  mobileImage: string;
+  desktopImage: string;
+  altText: string;
+}
+
+const { title, text, boldText, mobileImage, desktopImage, altText } = Astro.props;
+---
+<section
+  class="px-5 py-10 bg-primary flex-col justify-start items-center gap-8 inline-flex
+  xlg:px-[100px] xlg:flex-row-reverse xlg:justify-end
+  xxl:px-[140px] xxl:flex-row-reverse xxl:justify-end"
+>
+  <div class="flex justify-center items-center">
+    <picture class="xxl:w-[400px] xxl:h-[400px] xlg:w-[400px] xlg:h-[400px] rounded-[10px]">
+      <!-- Imagen para dispositivos móviles -->
+      <source srcset={mobileImage} media="(max-width: 640px)" />
+      <!-- Imagen para dispositivos mayores a 640px -->
+      <source srcset={desktopImage} media="(min-width: 641px)" />
+      <img
+        src={desktopImage}
+        class="w-[400px] h-[400px] rounded-[10px]"
+        alt={altText}
+      />
+    </picture>
+  </div>
+
+  <div
+    class="grow shrink basis-0 flex-col justify-center items-start gap-8 inline-flex"
+  >
+    <!-- Título -->
+    <h2
+      class="text-center self-stretch text-secondary text-2xl font-extrabold
+      font-['Manrope'] uppercase tracking-[4.08px] xlg:text-start xxl:text-start"
+    >
+      {title}
+    </h2>
+    <!-- Texto -->
+    <p class="self-stretch text-center xlg:text-start xxl:text-start">
+      <span class="text-white text-base font-medium font-['Manrope'] leading-10">
+        {text}
+      </span>
+      <span class="text-white text-base font-bold font-['Manrope'] leading-10">
+        {boldText}
+      </span>
+    </p>
+  </div>
+</section>
