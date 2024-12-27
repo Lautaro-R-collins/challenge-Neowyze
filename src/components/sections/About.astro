@@ -1,7 +1,10 @@
 ---
+// importacion de componentes 
 import Carrusel from "../Carrusel.astro";
 import Button from "../Button.astro";
 import Badge from "../Badge.astro";
+// importacion imagenes
+import DesktopImg from "../../assets/Desktop-img/desktop-sobrenosotros.png";
 ---
 
 <!-- Seccion principal del about -->
@@ -25,9 +28,10 @@ import Badge from "../Badge.astro";
     xxl:self-stretch xxl:gap-8 xxl:inline-flex
     xxl:flex-row xxl:justify-start xxl:items-center"
   >
+    <!-- img -->
     <div class="grow shrink basis-0">
       <img
-        src="/src/assets/Desktop-img/desktop-sobrenosotros.png"
+        src={DesktopImg.src}
         class="h-[300px] sm:h-[522px] rounded-[10px] xxl:h-[522px]"
         alt="Sobre Nosotros"
       />

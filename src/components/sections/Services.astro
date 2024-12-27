@@ -1,5 +1,17 @@
 ---
+// imports imagenes mobile
+import MobileSer1 from '/src/assets/Mobile-servicios/mobile-servicios-1.png';
+import MobileSer2 from '/src/assets/Mobile-servicios/mobile-servicios-2.png';
+import MobileSer3 from '/src/assets/Mobile-servicios/mobile-servicios-3.png';
+import MobileSer4 from '/src/assets/Mobile-servicios/mobile-servicios-4.png';
+import MobileSer5 from '/src/assets/Mobile-servicios/mobile-servicios-5.png';
 
+// imports imagenes desktop
+import DesktopSer1 from '/src/assets/servicios.img/desktop-servicios-1.jpg';
+import DesktopSer2 from '/src/assets/servicios.img/desktop-servicios-2.jpg';
+import DesktopSer3 from '/src/assets/servicios.img/desktop-servicios-3.jpg';
+import DesktopSer4 from '/src/assets/servicios.img/desktop-servicios-4.jpg';
+import DesktopSer5 from '/src/assets/servicios.img/desktop-servicios-5.jpg';
 ---
 
 <div
@@ -51,16 +63,16 @@ xxl:text-left xxl:text-[80px] xxl:font-semibold xxl:tracking-[12px] xxl:px-[140p
             <picture class="w-[400px] h-[400px] rounded-[10px]">
                 <!-- Imagen para dispositivos móviles -->
                 <source
-                    srcset="/src/assets/Mobile-servicios/mobile-servicios-02.png"
+                    srcset={MobileSer1.src}
                     media="(max-width: 640px)"
                 />
                 <!-- Imagen para dispositivos mayores a 640px -->
                 <source
-                    srcset="/src/assets/servicios.img/desktop-servicios-1.jpg"
+                    srcset={DesktopSer1.src}
                     media="(min-width: 641px)"
                 />
                 <img
-                    src="/src/assets/servicios.img/desktop-servicios-1.jpg"
+                    src={DesktopSer1.src}
                     class="w-[400px] h-[400px] rounded-[10px]"
                     alt="Diseño de exteriores"
                 />
@@ -78,16 +90,16 @@ xxl:text-left xxl:text-[80px] xxl:font-semibold xxl:tracking-[12px] xxl:px-[140p
         <picture class="w-[400px] h-[400px] rounded-[10px]">
             <!-- Imagen para dispositivos móviles -->
             <source
-                srcset="/src/assets/Mobile-servicios/mobile-servicios-01.png"
+                srcset={MobileSer2.src}
                 media="(max-width: 640px)"
             />
             <!-- Imagen para dispositivos mayores a 640px -->
             <source
-                srcset="/src/assets/servicios.img/desktop-servicios-2.jpg"
+                srcset={DesktopSer2.src}
                 media="(min-width: 641px)"
             />
             <img
-                src="/src/assets/servicios.img/desktop-servicios-1.jpg"
+                src={DesktopSer2.src}
                 class="w-[400px] h-[400px] rounded-[10px]"
                 alt="Diseño de exteriores"
             />
@@ -172,16 +184,16 @@ xxl:text-left xxl:text-[80px] xxl:font-semibold xxl:tracking-[12px] xxl:px-[140p
             <picture class="w-[400px] h-[400px] rounded-[10px]">
                 <!-- Imagen para dispositivos móviles -->
                 <source
-                    srcset="/src/assets/Mobile-servicios/mobile-servicios-05.png"
+                    srcset={MobileSer3.src}
                     media="(max-width: 640px)"
                 />
                 <!-- Imagen para dispositivos mayores a 640px -->
                 <source
-                    srcset="/src/assets/servicios.img/desktop-servicios-3.jpg"
+                    srcset={DesktopSer3.src}
                     media="(min-width: 641px)"
                 />
                 <img
-                    src="/src/assets/servicios.img/desktop-servicios-1.jpg"
+                    src={DesktopSer3.src}
                     class="w-[400px] h-[400px] rounded-[10px]"
                     alt="Diseño de exteriores"
                 />
@@ -199,16 +211,16 @@ xxl:text-left xxl:text-[80px] xxl:font-semibold xxl:tracking-[12px] xxl:px-[140p
         <picture class="w-[400px] h-[400px] rounded-[10px]">
             <!-- Imagen para dispositivos móviles -->
             <source
-                srcset="/src/assets/Mobile-servicios/mobile-servicios-04.png"
+                srcset={MobileSer4.src}
                 media="(max-width: 640px)"
             />
             <!-- Imagen para dispositivos mayores a 640px -->
             <source
-                srcset="/src/assets/servicios.img/desktop-servicios-4.jpg"
+                srcset={DesktopSer4.src}
                 media="(min-width: 641px)"
             />
             <img
-                src="/src/assets/servicios.img/desktop-servicios-4.jpg"
+                src={DesktopSer4.src}
                 class="w-[400px] h-[400px] rounded-[10px]"
                 alt="Diseño de exteriores"
             />
@@ -296,16 +308,16 @@ xxl:text-left xxl:text-[80px] xxl:font-semibold xxl:tracking-[12px] xxl:px-[140p
             <picture class="w-[400px] h-[400px] rounded-[10px]">
                 <!-- Imagen para dispositivos móviles -->
                 <source
-                    srcset="/src/assets/Mobile-servicios/mobile-servicios-03.png"
+                    srcset={MobileSer5.src}
                     media="(max-width: 640px)"
                 />
                 <!-- Imagen para dispositivos mayores a 640px -->
                 <source
-                    srcset="/src/assets/servicios.img/desktop-servicios-5.jpg"
+                    srcset={DesktopSer5.src}
                     media="(min-width: 641px)"
                 />
                 <img
-                    src="/src/assets/servicios.img/desktop-servicios-5.jpg"
+                    src={DesktopSer5.src}
                     class="w-[400px] h-[400px] rounded-[10px]"
                     alt="Diseño de exteriores"
                 />
