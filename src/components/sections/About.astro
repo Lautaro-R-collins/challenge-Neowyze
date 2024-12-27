@@ -9,13 +9,14 @@ import Badge from "../Badge.astro";
 <section
   id="about"
   class="px-5 py-10 flex-col justify-center items-center gap-8 inline-flex
+  xlg:px-[100px] xlg:py-16 xlg:flex-col xlg:justify-start xlg:items-start xlg:gap-[50px]
   xxl:px-[140px] xxl:py-20 xxl:flex-col xxl:justify-start xxl:items-start xxl:gap-[50px]"
 >
   <!-- Título -->
   <h1
     class="text-center text-[#564376] text-[64px] font-normal font-bebas tracking-[10.24px]
-    md:self-stretch md:text-secondary md:text-8xl md:font-normal md:font-bebas md:tracking-[15.36px]
-    xxl:text-left xxl:text-[80px] xxl:font-semibold xxl:tracking-[12px] xxl:mb-10"
+    xxl:self-stretch xxl:text-secondary xxl:text-8xl  xxl:tracking-[15.36px]
+    xxl:text-left xxl:text-[80px] xxl:font-semibold xxl:mb-10"
   >
     SOBRE NOSOTROS
   </h1>
@@ -23,7 +24,7 @@ import Badge from "../Badge.astro";
   
   <div
     class="self-stretch flex-col justify-center items-start gap-8 flex
-    md:self-stretch md:justify-start md:items-center md:gap-8 md:inline-flex
+    xxl:self-stretch  xxl:gap-8 xxl:inline-flex
     xxl:flex-row xxl:justify-start xxl:items-center"
   >
 
@@ -36,13 +37,11 @@ import Badge from "../Badge.astro";
     </div>
 
     <div
-      class="self-stretch flex-col justify-center items-center gap-8 flex
-      md:grow md:shrink md:basis-0 md:flex md:flex-col md:justify-center md:items-start md:gap-8
+      class="self-stretch flex-col justify-center items-center gap-8 flex xlg:flex-col  xlg:items-start 
       xxl:items-start xxl:w-[50%]"
     >
       <h2
         class="text-center text-[#929f36] text-2xl font-extrabold font-['Manrope'] uppercase tracking-[4.08px]
-        md:text-primary md:text-2xl md:font-extrabold md:font-['Manrope'] md:uppercase md:tracking-[4.08px]
         xxl:text-left xxl:text-3xl xxl:font-extrabold xxl:tracking-[6px]"
       >
         ¿Por qué elegirnos?
@@ -50,6 +49,7 @@ import Badge from "../Badge.astro";
 
       <p
         class="text-center text-[#6e6e6e] text-base font-medium font-['Manrope'] leading-10
+        xlg:text-left xlg:text-lg xlg:leading-8
         xxl:text-left xxl:text-lg xxl:leading-8"
       >
         Hoy en día los espacios verdes cumplen múltiples funciones, convirtiéndose en espacios de distensión, encuentro y conexión. Disfrutar de un espacio verde bien diseñado y mantenido es indispensable para sentirnos más plenos. No hay espacio que no pueda integrarse a la naturaleza. <br />
@@ -64,17 +64,19 @@ import Badge from "../Badge.astro";
 
 
 <!-- Vision y Mision -->
-<section class="px-5 py-10 bg-[#929f36] flex-col justify-start items-start gap-8 inline-flex overflow-hidden xxl:px-[140px] xxl:py-20 xxl:bg-primary xxl:flex-col xxl:justify-start xxl:items-start xxl:gap-8 xxl:inline-flex xxl:overflow-hidden">
+<section class="px-5 py-10 bg-primary flex-col justify-start items-start gap-8 inline-flex overflow-hidden 
+xlg:px-[100px] xlg:py-20  xlg:flex-col xlg:justify-start xlg:items-start xlg:gap-8 xlg:inline-flex xlg:overflow-hidden
+xxl:px-[140px] xxl:py-20  xxl:flex-col xxl:justify-start xxl:items-start xxl:gap-8 xxl:inline-flex xxl:overflow-hidden">
   
   <!-- Contenedor misión/visión-->
-  <div class="xxl:flex xxl:gap-8">
+  <div class="xlg:flex xlg:gap-8 xxl:flex xxl:gap-8">
     
     <!-- Misión -->
-    <div class="xxl:w-1/2 flex flex-col gap-8">
-      <h2 class="text-center xxl:text-start text-white text-2xl font-extrabold font-['Manrope'] tracking-[4.08px]">
+    <div class="xlg:w-1/2 xxl:w-1/2 flex flex-col gap-8">
+      <h2 class="text-center xlg:text-start xxl:text-start text-white text-2xl font-extrabold font-['Manrope'] tracking-[4.08px]">
         MISIÓN
       </h2>
-      <p class="text-center xxl:text-start text-white text-base font-medium font-['Manrope'] leading-10">
+      <p class="text-center xlg:text-start xxl:text-start text-white text-base font-medium font-['Manrope'] leading-10">
         Ofrecer un servicio exclusivo que permita cumplir las necesidades de los
         clientes y reflejar las cualidades propias de los espacios. Generando
         valor para el cliente, algo que conseguimos gracias a la calidad<br />y
@@ -85,11 +87,11 @@ import Badge from "../Badge.astro";
     </div>
 
     <!-- Visión -->
-    <div class="xxl:w-1/2 flex flex-col gap-8">
-      <h2 class="text-center xxl:text-start text-white text-2xl font-extrabold font-['Manrope'] tracking-[4.08px]">
+    <div class="xlg:w-1/2  xxl:w-1/2 flex flex-col gap-8">
+      <h2 class="text-center xlg:text-start xxl:text-start text-white text-2xl font-extrabold font-['Manrope'] tracking-[4.08px]">
         VISIÓN
       </h2>
-      <p class="text-center xxl:text-start text-white text-base font-medium font-['Manrope'] leading-10">
+      <p class="text-center xlg:text-start xxl:text-start text-white text-base font-medium font-['Manrope'] leading-10">
         Ser líder en la prestación de servicios integrales de jardinería para
         favorecer y mejorar las condiciones de vida de cada lugar. Contribuir al
         desarrollo sustentable de las ciudades, recuperando y generando áreas
@@ -100,8 +102,8 @@ import Badge from "../Badge.astro";
   </div>
 
   <!--Badges -->
-  <div class="xxl:w-full flex flex-col gap-8">
-    <h2 class="text-center xxl:text-start text-white text-2xl font-extrabold font-['Manrope'] tracking-[4.08px]">
+  <div class="flex flex-col gap-8">
+    <h2 class="text-center xlg:text-start xxl:text-start text-white text-2xl font-extrabold font-['Manrope'] tracking-[4.08px]">
       VALORES
     </h2>
     <div class="flex flex-wrap justify-center gap-6 items-center">
