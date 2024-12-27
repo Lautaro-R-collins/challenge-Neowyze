@@ -1,9 +1,3 @@
----
-
----
-
-<!-- seccion principal de impronta -->
-
 
 <section
     id="imprint"
@@ -76,10 +70,24 @@
 </section>
 
 <div class="w-full">
-    <img
-        src="/src/assets/Desktop-img/banner-DESKTOP.jpg"
-        class="w-full h-[400px] object-cover"
-    />
+    <picture>
+        <!-- Imagen para dispositivos de hasta 500px -->
+        <source 
+            srcset="/src/assets/Mobile-img/banner-mobile.png" 
+            media="(max-width: 500px)" 
+        />
+        <!-- Imagen para dispositivos mayores a 500px -->
+        <source 
+            srcset="/src/assets/Desktop-img/banner-DESKTOP.jpg" 
+            media="(min-width: 501px)" 
+        />
+        <!-- Fallback (por si el navegador no soporta <picture>) -->
+        <img 
+            src="/src/assets/Desktop-img/banner-DESKTOP.jpg" 
+            class="w-full h-[400px] object-cover" 
+            alt="Banner" 
+        />
+    </picture>
 </div>
 
 <section
