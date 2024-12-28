@@ -4,8 +4,8 @@ export interface Props {
   text: string;
   titleStyles?: string; 
   textStyles?: string;  
-  titleSize?: string; // Permite definir el tamaño del título
-  textSize?: string;  // Permite definir el tamaño del texto
+  titleSize?: string; 
+  textSize?: string;  
 }
 
 const { title, text, titleStyles = "", textStyles = "", titleSize = "text-2xl", textSize = "text-[17px]" } = Astro.props;

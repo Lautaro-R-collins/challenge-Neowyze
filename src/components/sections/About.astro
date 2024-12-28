@@ -1,9 +1,9 @@
 ---
-// importacion de componentes 
 import Carrusel from "../Carrusel.astro";
 import Button from "../Button.astro";
 import Badge from "../Badge.astro";
-// importacion imagenes
+import TextCard from "../textCard.astro";
+
 import DesktopImg from "../../assets/Desktop-img/desktop-sobrenosotros.png";
 ---
 
@@ -26,7 +26,7 @@ import DesktopImg from "../../assets/Desktop-img/desktop-sobrenosotros.png";
   <div
     class="self-stretch flex-col justify-center items-start gap-8 flex
     xxl:self-stretch xxl:gap-8 xxl:inline-flex
-    xxl:flex-row xxl:justify-start xxl:items-center xlg:flex-row "
+    xxl:flex-row xxl:justify-start xxl:items-center xlg:flex-row"
   >
     <!-- img -->
     <div class="grow shrink basis-auto xlg:w-[80%] xxl:w-[50%]">
@@ -76,41 +76,19 @@ xxl:px-[140px] xxl:py-20 xxl:flex-col xxl:justify-start xxl:items-start xxl:gap-
   <!-- Contenedor misión/visión-->
   <div class="xlg:flex xlg:gap-8 xxl:flex xxl:gap-8">
     <!-- Misión -->
-    <div class="xlg:w-1/2 xxl:w-1/2 flex flex-col gap-8">
-      <h2
-        class="text-center xlg:text-start xxl:text-start text-white text-2xl font-extrabold font-['Manrope'] tracking-[4.08px]"
-      >
-        MISIÓN
-      </h2>
-      <p
-        class="text-center xlg:text-start xxl:text-start text-white text-base font-medium font-['Manrope'] leading-10"
-      >
-        Ofrecer un servicio exclusivo que permita cumplir las necesidades de los
-        clientes y reflejar las cualidades propias de los espacios. Generando
-        valor para el cliente, algo que conseguimos gracias a la calidad<br />y
-        excelencia de nuestros servicios. Poniendo a su disposición nuestro
-        equipo técnico y profesional rigurosamente seleccionado, formado y
-        especializado.
-      </p>
-    </div>
-
+    <TextCard
+      title="MISIÓN"
+      text="Ofrecer un servicio exclusivo que permita cumplir las necesidades de los clientes y reflejar las cualidades propias de los espacios. Generando valor para el cliente, algo que conseguimos gracias a la calidad<br/>y excelencia de nuestros servicios. Poniendo a su disposición nuestro equipo técnico y profesional rigurosamente seleccionado, formado y especializado."
+      titleStyles="text-white"
+      textStyles="text-white"
+    />
     <!-- Visión -->
-    <div class="xlg:w-1/2 xxl:w-1/2 flex flex-col gap-8">
-      <h2
-        class="text-center xlg:text-start xxl:text-start text-white text-2xl font-extrabold font-['Manrope'] tracking-[4.08px]"
-      >
-        VISIÓN
-      </h2>
-      <p
-        class="text-center xlg:text-start xxl:text-start text-white text-base font-medium font-['Manrope'] leading-10"
-      >
-        Ser líder en la prestación de servicios integrales de jardinería para
-        favorecer y mejorar las condiciones de vida de cada lugar. Contribuir al
-        desarrollo sustentable de las ciudades, recuperando y generando áreas
-        verdes habitables y estéticas que contribuyan a la biodiversidad y al
-        cambio climático.
-      </p>
-    </div>
+    <TextCard
+      title="VISIÓN"
+      text="Ser líder en la prestación de servicios integrales de jardinería para favorecer y mejorar las condiciones de vida de cada lugar. Contribuir al desarrollo sustentable de las ciudades, recuperando y generando áreas verdes habitables y estéticas que contribuyan a la biodiversidad y al cambio climático."
+      titleStyles="text-white"
+      textStyles="text-white"
+    />
   </div>
 
   <!--Badges -->
