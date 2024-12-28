@@ -4,18 +4,20 @@ export interface Props {
   text: string;
   titleStyles?: string; 
   textStyles?: string;  
+  titleSize?: string; // Permite definir el tamaño del título
+  textSize?: string;  // Permite definir el tamaño del texto
 }
 
-const { title, text, titleStyles = "", textStyles = "" } = Astro.props;
+const { title, text, titleStyles = "", textStyles = "", titleSize = "text-2xl", textSize = "text-[17px]" } = Astro.props;
 ---
 <div class="flex flex-col xxl:gap-[30px] xlg:gap-[30px]">
   <h3
-    class={`self-stretch text-2xl font-extrabold font-['Manrope'] uppercase tracking-[4.08px] ${titleStyles}`}
+    class={`self-stretch font-extrabold font-['Manrope'] uppercase tracking-[4.08px] ${titleSize} ${titleStyles}`}
   >
     {title}
   </h3>
   <p
-    class={`self-stretch text-[17px] font-medium font-['Manrope'] leading-10 ${textStyles}`}
+    class={`self-stretch font-medium font-['Manrope'] leading-10 ${textSize} ${textStyles}`}
   >
     {text}
   </p>
