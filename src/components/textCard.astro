@@ -1,0 +1,22 @@
+---
+export interface Props {
+  title: string;
+  text: string;
+  titleStyles?: string; 
+  textStyles?: string;  
+}
+
+const { title, text, titleStyles = "", textStyles = "" } = Astro.props;
+---
+<div class="flex flex-col xxl:gap-[30px] xlg:gap-[30px]">
+  <h3
+    class={`self-stretch text-2xl font-extrabold font-['Manrope'] uppercase tracking-[4.08px] ${titleStyles}`}
+  >
+    {title}
+  </h3>
+  <p
+    class={`self-stretch text-[17px] font-medium font-['Manrope'] leading-10 ${textStyles}`}
+  >
+    {text}
+  </p>
+</div>
