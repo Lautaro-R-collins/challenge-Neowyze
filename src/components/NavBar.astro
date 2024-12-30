@@ -12,7 +12,10 @@ const navLinks = [
 ---
 
 <nav
-  class="hidden sm:flex  fixed z-50 top-7 left-1/2 transform -translate-x-1/2 gap-12
+  class="xlg:origin-top-left xlg:bg-gradient-to-r xlg:backdrop-blur-md
+xlg:shadow-lg xlg:rounded-[30px] xlg:w-[calc(100%-400px)] xlg:h-[60px] xlg:items-center
+xlg:px-[20px] xlg:py-[12px] xlg:justify-between xlg:mt-[30px]
+hidden sm:flex md:flex fixed z-50 top-7 left-1/2 transform -translate-x-1/2 gap-12
 origin-top-left bg-gradient-to-r from-white to-[#edf0d9] backdrop-blur-md shadow-lg
 rounded-[40px] w-[calc(100%-580px)] h-16 items-center px-[30px] py-[10px] justify-between
 mt-[40px]"
@@ -41,14 +44,14 @@ mt-[40px]"
 
 <button
   id="menu-toggle"
-  class="fixed top-4 left-4 font-bold py-2 px-4 block sm:hidden "
+  class="fixed top-4 left-4 font-bold py-2 px-4 block sm:hidden md:hidden"
 >
   <MenuIconOpen />
 </button>
 
 <div
   id="mobile-menu"
-  class="hidden fixed inset-0 z-40 flex flex-col items-center justify-center  bg-gradient-to-r from-white to-[#edf0d9]"
+  class="hidden fixed inset-0 z-40 flex flex-col items-center justify-center bg-gradient-to-r from-white to-[#edf0d9]"
 >
   <button
     id="close-menu"
@@ -68,6 +71,7 @@ mt-[40px]"
   </ul>
   <img src={logo.src} alt="Logo" class="mt-12 w-[150px] h-auto" />
 </div>
+
 
 <script>
   const toggleButton = document.querySelector("#menu-toggle");

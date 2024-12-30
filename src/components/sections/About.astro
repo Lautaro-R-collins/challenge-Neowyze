@@ -11,12 +11,14 @@ import DesktopImg from "../../assets/Desktop-img/desktop-sobrenosotros.png";
 <section
   id="about"
   class="px-5 py-10 flex-col justify-center items-center gap-8 inline-flex
-  xlg:px-[90px] xlg:py-14 xlg:flex-col xlg:justify-start xlg:items-start xlg:gap-[30px]
+  xlg:px-[80px] xlg:py-12 xlg:flex-col xlg:justify-start xlg:items-start xlg:gap-[30px]
   xxl:px-[140px] xxl:py-20 xxl:flex-col xxl:justify-start xxl:items-start xxl:gap-[50px]"
 >
   <!-- Título -->
   <h1
     class="text-center text-[#564376] text-[64px] font-normal font-bebas tracking-[10.24px]
+    xlg:self-stretch xlg:text-secondary xlg:text-6xl xlg:tracking-[10px]
+    xlg:text-left xlg:text-[60px] xlg:font-semibold xlg:mb-8
     xxl:self-stretch xxl:text-secondary xxl:text-8xl xxl:tracking-[15.36px]
     xxl:text-left xxl:text-[80px] xxl:font-semibold xxl:mb-10"
   >
@@ -25,14 +27,16 @@ import DesktopImg from "../../assets/Desktop-img/desktop-sobrenosotros.png";
 
   <div
     class="self-stretch flex-col justify-center items-start gap-8 flex
+    xlg:self-stretch xlg:gap-6 xlg:inline-flex 
+    xlg:flex-row xlg:justify-start xlg:items-center
     xxl:self-stretch xxl:gap-8 xxl:inline-flex
-    xxl:flex-row xxl:justify-start xxl:items-center xlg:flex-row"
+    xxl:flex-row xxl:justify-start xxl:items-center"
   >
     <!-- img -->
-    <div class="grow shrink basis-auto xlg:w-[80%] xxl:w-[50%]">
+    <div class="grow shrink basis-auto xlg:w-[140%] xxl:w-[50%]">
       <img
         src={DesktopImg.src}
-        class="h-[300px] sm:h-[522px] rounded-[10px] xxl:h-[522px] xlg:h-[320px] w-full"
+        class="h-[300px] sm:h-[522px] rounded-[10px] xxl:h-[522px] xlg:h-[390px] w-full"
         alt="Sobre Nosotros"
       />
     </div>
@@ -42,6 +46,7 @@ import DesktopImg from "../../assets/Desktop-img/desktop-sobrenosotros.png";
     >
       <h2
         class="text-center text-[#929f36] text-2xl font-extrabold font-['Manrope'] uppercase tracking-[4.08px]
+        xlg:text-left xlg:text-2xl xlg:font-bold xlg:tracking-[4px]
         xxl:text-left xxl:text-3xl xxl:font-extrabold xxl:tracking-[6px]"
       >
         ¿Por qué elegirnos?
@@ -49,7 +54,7 @@ import DesktopImg from "../../assets/Desktop-img/desktop-sobrenosotros.png";
 
       <p
         class="text-center text-[#6e6e6e] text-base font-medium font-['Manrope'] leading-10
-        xlg:text-left xlg:text-lg xlg:leading-8
+        xlg:text-left xlg:text-base xlg:leading-6
         xxl:text-left xxl:text-lg xxl:leading-8"
       >
         Hoy en día los espacios verdes cumplen múltiples funciones,
@@ -70,11 +75,13 @@ import DesktopImg from "../../assets/Desktop-img/desktop-sobrenosotros.png";
 <!-- Vision y Mision -->
 <section
   class="px-5 py-10 bg-primary flex-col justify-start items-start gap-8 inline-flex overflow-hidden
-xlg:px-[90px] xlg:py-14 xlg:flex-col xlg:justify-start xlg:items-start xlg:gap-8 xlg:inline-flex xlg:overflow-hidden
-xxl:px-[140px] xxl:py-20 xxl:flex-col xxl:justify-start xxl:items-start xxl:gap-8 xxl:inline-flex xxl:overflow-hidden"
+  xlg:px-[80px] xlg:py-14 xlg:flex-col xlg:justify-start xlg:items-start xlg:gap-6 xlg:inline-flex xlg:overflow-hidden
+  xxl:px-[140px] xxl:py-20 xxl:flex-col xxl:justify-start xxl:items-start xxl:gap-8 xxl:inline-flex xxl:overflow-hidden"
 >
   <!-- Contenedor misión/visión-->
-  <div class=" text-center  xlg:flex xlg:gap-8 xxl:flex xxl:gap-8 xlg:text-start xxl:text-start">
+  <div
+    class="text-center xlg:flex xlg:gap-6 xxl:flex xxl:gap-8 xlg:text-start xxl:text-start"
+  >
     <!-- Misión -->
     <TextCard
       title="MISIÓN"
@@ -92,7 +99,7 @@ xxl:px-[140px] xxl:py-20 xxl:flex-col xxl:justify-start xxl:items-start xxl:gap-
   </div>
 
   <!--Badges -->
-  <div class="flex flex-col gap-8">
+  <div class="flex flex-col xlg:gap-6 gap-8">
     <h2
       class="text-center xlg:text-start xxl:text-start text-white text-2xl font-extrabold font-['Manrope'] tracking-[4.08px]"
     >

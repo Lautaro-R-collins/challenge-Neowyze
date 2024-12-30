@@ -34,18 +34,18 @@ const data = [
     },
 ];
 ---
-<section class="swiper-container px-5 py-10 justify-start items-start gap-8 xlg:px-[100px] xlg:py-20 xlg:flex-col xlg:justify-start xlg:items-start xlg:gap-8 xxl:px-[140px] xxl:py-20 xxl:flex-col xxl:justify-start xxl:items-start xxl:gap-8">
+<section class="swiper-container px-5 py-10 justify-start items-start gap-8 xlg:px-[80px] xlg:py-20 xlg:flex-col xlg:justify-start xlg:items-start xlg:gap-8 xxl:px-[140px] xxl:py-20 xxl:flex-col xxl:justify-start xxl:items-start xxl:gap-8">
     <h2 class="self-stretch text-primary text-2xl font-extrabold font-['Manrope'] uppercase tracking-[4.08px] mb-8">
         NUESTROS TRABAJOS
     </h2>
 
-    <div class="swiper-wrapper h-[575px] justify-start items-center gap-8 inline-flex">
+    <div class="swiper-wrapper xlg:h-[420px] h-[575px] justify-start items-center gap-8 inline-flex">
         {data.map((item) => (
-            <div class="swiper-slide min-w-max h-[575px] justify-center items-center inline-flex" >
+            <div class="swiper-slide min-w-max xlg:h-[420px] h-[575px] justify-center items-center inline-flex" >
                 <img
                     src={item.src}
                     alt={item.alt}
-                    class="w-full h-[575px] object-cover rounded-lg shadow-lg"
+                    class="w-full xlg:h-[420px] h-[575px] object-cover rounded-lg shadow-lg"
                 />
                 <p class="self-stretch text-mutedText text-xl font-medium font-['Manrope'] leading-10">
                     {item.title}
