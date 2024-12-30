@@ -6,10 +6,10 @@ export interface Props {
   mobileImage: string;
   desktopImage: string;
   altText: string;
-  titleColor?: string; 
-  textColor?: string;  
-  bgColor?: string;    
-  isReversed?: boolean; 
+  titleColor?: string;
+  textColor?: string;
+  bgColor?: string;
+  isReversed?: boolean;
 }
 
 const {
@@ -19,20 +19,23 @@ const {
   mobileImage,
   desktopImage,
   altText,
-  titleColor = "text-secondary", 
-  textColor = "text-white",      
-  bgColor = "bg-primary",        
-  isReversed = false,            
+  titleColor = "text-secondary",
+  textColor = "text-white",
+  bgColor = "bg-primary",
+  isReversed = false,
 } = Astro.props;
 ---
+
 <section
   class={`px-5 py-10 ${bgColor} flex-col justify-start items-center gap-8 inline-flex
     xlg:px-[80px] xlg:flex-row ${isReversed ? "xlg:flex-row-reverse xlg:justify-end" : ""}
     xxl:px-[140px] xxl:flex-row ${isReversed ? "xxl:flex-row-reverse xxl:justify-end" : ""}
-    ${bgColor === "bg-white" && !isReversed ? "flex-col-reverse" : ""}`}  
+    ${bgColor === "bg-white" && !isReversed ? "flex-col-reverse" : ""}`}
 >
   <div class="flex justify-center items-center">
-    <picture class="xxl:w-[400px] xxl:h-[400px] xlg:w-[400px] xlg:h-[400px] rounded-[10px]">
+    <picture
+      class="xxl:w-[400px] xxl:h-[400px] xlg:w-[400px] xlg:h-[400px] rounded-[10px]"
+    >
       <source srcset={mobileImage} media="(max-width: 640px)" />
       <source srcset={desktopImage} media="(min-width: 641px)" />
       <img
@@ -43,19 +46,24 @@ const {
     </picture>
   </div>
 
-  <div class="grow shrink basis-0 flex-col justify-center items-start gap-8 inline-flex">
+  <div class="grow shrink basis-0 flex-col justify-center items-start gap-8 xlg:gap-6 xxl:gap-8 inline-flex">
     <h2
-      class={`text-center self-stretch ${titleColor} text-2xl font-extrabold font-['Manrope'] uppercase tracking-[4.08px] xlg:text-start xxl:text-start`}
+      class={`text-center self-stretch ${titleColor} text-2xl font-extrabold font-['Manrope'] uppercase tracking-[4.08px] xlg:text-xl xlg:tracking-[3px] xlg:text-start xxl:text-2xl xxl:tracking-[4.08px] xxl:text-start`}
     >
       {title}
     </h2>
     <p class="self-stretch text-center xlg:text-start xxl:text-start">
-      <span class={`text-base font-medium font-['Manrope'] leading-10 ${textColor}`}>
+      <span
+        class={`text-base font-medium font-['Manrope'] leading-10 xlg:leading-8 xlg:text-sm xxl:leading-10 xxl:text-base ${textColor}`}
+      >
         {text}
       </span>
-      <span class={`text-base font-bold font-['Manrope'] leading-10 ${textColor}`}>
+      <span
+        class={`text-base font-bold font-['Manrope'] leading-10 xlg:leading-8 xlg:text-sm xxl:leading-10 xxl:text-base ${textColor}`}
+      >
         {boldText}
       </span>
     </p>
   </div>
+  
 </section>
