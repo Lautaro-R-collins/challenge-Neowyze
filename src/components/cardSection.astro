@@ -27,8 +27,9 @@ const {
 ---
 <section
   class={`px-5 py-10 ${bgColor} flex-col justify-start items-center gap-8 inline-flex
-  xlg:px-[80px] xlg:flex-row ${isReversed ? "xlg:flex-row-reverse xlg:justify-end" : ""}
-  xxl:px-[140px] xxl:flex-row ${isReversed ? "xxl:flex-row-reverse xxl:justify-end" : ""}`}
+    xlg:px-[80px] xlg:flex-row ${isReversed ? "xlg:flex-row-reverse xlg:justify-end" : ""}
+    xxl:px-[140px] xxl:flex-row ${isReversed ? "xxl:flex-row-reverse xxl:justify-end" : ""}
+    ${bgColor === "bg-white" && !isReversed ? "flex-col-reverse" : ""}`}  
 >
   <div class="flex justify-center items-center">
     <picture class="xxl:w-[400px] xxl:h-[400px] xlg:w-[400px] xlg:h-[400px] rounded-[10px]">
