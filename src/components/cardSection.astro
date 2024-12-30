@@ -1,0 +1,60 @@
+---
+export interface Props {
+  title: string;
+  text: string;
+  boldText: string;
+  mobileImage: string;
+  desktopImage: string;
+  altText: string;
+  titleColor?: string; 
+  textColor?: string;  
+  bgColor?: string;    
+  isReversed?: boolean; 
+}
+
+const {
+  title,
+  text,
+  boldText,
+  mobileImage,
+  desktopImage,
+  altText,
+  titleColor = "text-secondary", 
+  textColor = "text-white",      
+  bgColor = "bg-primary",        
+  isReversed = false,            
+} = Astro.props;
+---
+<section
+  class={`px-5 py-10 ${bgColor} flex-col justify-start items-center gap-8 inline-flex
+  xlg:px-[100px] xlg:flex-row ${isReversed ? "xlg:flex-row-reverse xlg:justify-end" : ""}
+  xxl:px-[140px] xxl:flex-row ${isReversed ? "xxl:flex-row-reverse xxl:justify-end" : ""}`}
+>
+  <div class="flex justify-center items-center">
+    <picture class="xxl:w-[400px] xxl:h-[400px] xlg:w-[400px] xlg:h-[400px] rounded-[10px]">
+      <source srcset={mobileImage} media="(max-width: 640px)" />
+      <source srcset={desktopImage} media="(min-width: 641px)" />
+      <img
+        src={desktopImage}
+        class="w-[400px] h-[400px] rounded-[10px]"
+        alt={altText}
+      />
+    </picture>
+  </div>
+
+  <div class="grow shrink basis-0 flex-col justify-center items-start gap-8 inline-flex">
+    <h2
+      class={`text-center self-stretch ${titleColor} text-2xl font-extrabold font-['Manrope'] uppercase tracking-[4.08px] xlg:text-start xxl:text-start`}
+    >
+      {title}
+    </h2>
+    <p class="self-stretch text-center xlg:text-start xxl:text-start">
+      <span class={`text-base font-medium font-['Manrope'] leading-10 ${textColor}`}>
+        {text}
+      </span>
+      <span class={`text-base font-bold font-['Manrope'] leading-10 ${textColor}`}>
+        {boldText}
+      </span>
+    </p>
+  </div>
+</section>
