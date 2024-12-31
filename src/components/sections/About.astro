@@ -4,6 +4,7 @@ import Carrusel from "../Carrusel.astro";
 import Badge from "../Badge.astro";
 import TextCard from "../textCard.astro";
 import { badges } from '../../mocks/badges';
+import { textDataAbout } from "../../mocks/textDataAbout";
 ---
 
 <!-- Seccion principal del about -->
@@ -13,34 +14,25 @@ import { badges } from '../../mocks/badges';
 
 <!-- Vision y Mision -->
 <section
-  class="px-5 py-10 bg-primary flex-col justify-start items-start gap-8 inline-flex overflow-hidden
-  xlg:px-[80px] xlg:py-14 xlg:flex-col xlg:justify-start xlg:items-start xlg:gap-6 xlg:inline-flex xlg:overflow-hidden
-  xxl:px-[140px] xxl:py-20 xxl:flex-col xxl:justify-start xxl:items-start xxl:gap-8 xxl:inline-flex xxl:overflow-hidden"
+  class="bg-primary px-5 py-10 flex flex-col gap-8 overflow-hidden
+  xlg:px-[80px] xlg:py-14 xlg:items-start xlg:gap-6 
+  xxl:px-[140px] xxl:py-20 xxl:items-start xxl:gap-8"
 >
-  <!-- Contenedor misión/visión-->
+  <!-- Contenedor misión/visión -->
   <div
-    class="text-center xlg:flex xlg:gap-6 xxl:flex xxl:gap-8 xlg:text-start xxl:text-start"
+    class="text-center flex flex-col xlg:flex-row xlg:gap-6 xxl:gap-8
+    xlg:text-start xxl:text-start"
   >
-    <!-- Misión -->
-    <TextCard
-      title="MISIÓN"
-      text="Ofrecer un servicio exclusivo que permita cumplir las necesidades de los clientes y reflejar las cualidades propias de los espacios. Generando valor para el cliente, algo que conseguimos gracias a la calidad<br/>y excelencia de nuestros servicios. Poniendo a su disposición nuestro equipo técnico y profesional rigurosamente seleccionado, formado y especializado."
-      titleStyles="text-white"
-      textStyles="text-white"
-    />
-    <!-- Visión -->
-    <TextCard
-      title="VISIÓN"
-      text="Ser líder en la prestación de servicios integrales de jardinería para favorecer y mejorar las condiciones de vida de cada lugar. Contribuir al desarrollo sustentable de las ciudades, recuperando y generando áreas verdes habitables y estéticas que contribuyan a la biodiversidad y al cambio climático."
-      titleStyles="text-white"
-      textStyles="text-white"
-    />
+    {textDataAbout.map((card) => (
+      <TextCard {...card} />
+    ))}
   </div>
 
-  <!--Badges -->
-  <div class="flex flex-col xlg:gap-6 gap-8">
+  <!-- Badges -->
+  <div class="flex flex-col gap-8 xlg:gap-6">
     <h2
-      class="text-center xlg:text-start xxl:text-start text-white text-2xl font-extrabold font-['Manrope'] tracking-[4.08px]"
+      class="text-white text-2xl font-extrabold tracking-wide text-center
+      xlg:text-start xxl:text-start"
     >
       VALORES
     </h2>
