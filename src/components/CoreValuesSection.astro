@@ -1,18 +1,10 @@
 ---
-import CardAbout from "../CardAbout.astro";
-import Carrusel from "../Carrusel.astro";
-import Badge from "../Badge.astro";
-import TextCard from "../textCard.astro";
-import { badges } from "../../mocks/badges";
-import { textDataAbout } from "../../mocks/textDataAbout";
+import Badge from "./Badge.astro"
+import TextCard from "./textCard.astro";
+import { badges } from "../mocks/badges";
+import { textDataAbout } from "../mocks/textDataAbout";
 ---
 
-<!-- Seccion principal del about -->
-<section id="about">
-  <CardAbout />
-</section>
-
-<!-- Vision y Mision -->
 <section
   class="bg-primary px-5 py-10 flex flex-col gap-8 overflow-hidden
   xlg:px-[80px] xlg:py-14 xlg:items-start xlg:gap-6
@@ -39,6 +31,3 @@ import { textDataAbout } from "../../mocks/textDataAbout";
     </div>
   </div>
 </section>
-
-<!-- componente Carrusel -->
-<Carrusel />
