@@ -6,27 +6,14 @@ import { cardData } from "../../mocks/cardData"
 
 <section id="services">
     <h1
-        class="text-center text-[#564376] text-[64px] font-normal font-bebas tracking-[10.24px]
-    xlg:text-left xlg:text-[60px] xlg:font-medium xlg:tracking-[9px] xlg:px-[80px]
-    xxl:text-left xxl:text-[80px] xxl:font-semibold xxl:tracking-[12px] xxl:px-[140px]"
+      class="text-center text-[#564376] text-[64px] font-normal font-bebas tracking-[10.24px]
+      xlg:text-left xlg:text-[60px] xlg:font-medium xlg:tracking-[9px] xlg:px-[80px]
+      xxl:text-left xxl:text-[80px] xxl:font-semibold xxl:tracking-[12px] xxl:px-[140px]"
     >
-        NUESTROS SERVICIOS
+      NUESTROS SERVICIOS
     </h1>
-
-    {
-        cardData.map((card) => (
-            <CardSection
-                title={card.title}
-                text={card.text}
-                boldText={card.boldText}
-                mobileImage={card.mobileImage}
-                desktopImage={card.desktopImage}
-                altText={card.altText}
-                bgColor={card.bgColor}
-                titleColor={card.titleColor}
-                textColor={card.textColor}
-                isReversed={card.isReversed}
-            />
-        ))
-    }
-</section>
+    
+    {cardData.map((card) => (
+      <CardSection {...card} />
+    ))}
+  </section>
