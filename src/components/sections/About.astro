@@ -5,6 +5,16 @@ import Badge from "../Badge.astro";
 import TextCard from "../textCard.astro";
 
 import DesktopImg from "../../assets/Desktop-img/desktop-sobrenosotros.png";
+
+const badges = [
+  "Cercanía",
+  "Profesionalismo",
+  "Responsabilidad social empresaria",
+  "Desarrollo Sustentable",
+  "Adaptabilidad",
+  "Orientación al cliente",
+  "Integridad",
+];
 ---
 
 <!-- Seccion principal del about -->
@@ -27,7 +37,7 @@ import DesktopImg from "../../assets/Desktop-img/desktop-sobrenosotros.png";
 
   <div
     class="self-stretch flex-col justify-center items-start gap-8 flex
-    xlg:self-stretch xlg:gap-6 xlg:inline-flex 
+    xlg:self-stretch xlg:gap-6 xlg:inline-flex
     xlg:flex-row xlg:justify-start xlg:items-center
     xxl:self-stretch xxl:gap-8 xxl:inline-flex
     xxl:flex-row xxl:justify-start xxl:items-center"
@@ -106,13 +116,7 @@ import DesktopImg from "../../assets/Desktop-img/desktop-sobrenosotros.png";
       VALORES
     </h2>
     <div class="flex flex-wrap justify-center gap-6 items-center">
-      <Badge label="Cercanía" />
-      <Badge label="Profesionalismo" />
-      <Badge label="Responsabilidad social empresaria" />
-      <Badge label="Desarrollo Sustentable" />
-      <Badge label="Adaptabilidad" />
-      <Badge label="Orientación al cliente" />
-      <Badge label="Integridad" />
+      {badges.map((label) => <Badge label={label} />)}
     </div>
   </div>
 </section>
