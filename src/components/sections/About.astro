@@ -1,76 +1,14 @@
 ---
+import CardAbout from "../CardAbout.astro";
 import Carrusel from "../Carrusel.astro";
-import Button from "../Button.astro";
 import Badge from "../Badge.astro";
 import TextCard from "../textCard.astro";
 import { badges } from '../../mocks/badges';
-
-import DesktopImg from "../../assets/Desktop-img/desktop-sobrenosotros.png";
 ---
 
 <!-- Seccion principal del about -->
-<section
-  id="about"
-  class="px-5 py-10 flex-col justify-center items-center gap-8 inline-flex
-  xlg:px-[80px] xlg:py-12 xlg:flex-col xlg:justify-start xlg:items-start xlg:gap-[30px]
-  xxl:px-[140px] xxl:py-20 xxl:flex-col xxl:justify-start xxl:items-start xxl:gap-[50px]"
->
-  <!-- Título -->
-  <h1
-    class="text-center text-[#564376] text-[64px] font-normal font-bebas tracking-[10.24px]
-    xlg:self-stretch xlg:text-secondary xlg:text-6xl xlg:tracking-[10px]
-    xlg:text-left xlg:text-[60px] xlg:font-semibold xlg:mb-8
-    xxl:self-stretch xxl:text-secondary xxl:text-8xl xxl:tracking-[15.36px]
-    xxl:text-left xxl:text-[80px] xxl:font-semibold xxl:mb-10"
-  >
-    SOBRE NOSOTROS
-  </h1>
-
-  <div
-    class="self-stretch flex-col justify-center items-start gap-8 flex
-    xlg:self-stretch xlg:gap-6 xlg:inline-flex
-    xlg:flex-row xlg:justify-start xlg:items-center
-    xxl:self-stretch xxl:gap-8 xxl:inline-flex
-    xxl:flex-row xxl:justify-start xxl:items-center"
-  >
-    <!-- img -->
-    <div class="grow shrink basis-auto xlg:w-[140%] xxl:w-[50%]">
-      <img
-        src={DesktopImg.src}
-        class="h-[300px] sm:h-[522px] rounded-[10px] xxl:h-[522px] xlg:h-[390px] w-full"
-        alt="Sobre Nosotros"
-      />
-    </div>
-    <div
-      class="self-stretch flex-col justify-center items-center gap-8 flex xlg:flex-col xlg:items-start
-      xxl:items-start xxl:w-[50%]"
-    >
-      <h2
-        class="text-center text-[#929f36] text-2xl font-extrabold font-['Manrope'] uppercase tracking-[4.08px]
-        xlg:text-left xlg:text-2xl xlg:font-bold xlg:tracking-[4px]
-        xxl:text-left xxl:text-3xl xxl:font-extrabold xxl:tracking-[6px]"
-      >
-        ¿Por qué elegirnos?
-      </h2>
-
-      <p
-        class="text-center text-[#6e6e6e] text-base font-medium font-['Manrope'] leading-10
-        xlg:text-left xlg:text-base xlg:leading-6
-        xxl:text-left xxl:text-lg xxl:leading-8"
-      >
-        Hoy en día los espacios verdes cumplen múltiples funciones,
-        convirtiéndose en espacios de distensión, encuentro y conexión.
-        Disfrutar de un espacio verde bien diseñado y mantenido es indispensable
-        para sentirnos más plenos. No hay espacio que no pueda integrarse a la
-        naturaleza. <br />
-        En <span class="font-bold">VERBENAS</span> te brindamos la posibilidad de
-        darle vida a nuevos espacios verdes, generando un espacio estético, sostenible
-        y disfrutable durante todo el año, haciendo de tu espacio un lugar único,
-        a la altura de tus pretensiones y necesidades.
-      </p>
-      <Button />
-    </div>
-  </div>
+<section id="about">
+  <CardAbout />
 </section>
 
 <!-- Vision y Mision -->
