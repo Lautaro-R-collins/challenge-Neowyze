@@ -1,44 +1,13 @@
 ---
 import CardAbout from "../CardAbout.astro";
 import Carrusel from "../Carrusel.astro";
-import Badge from "../Badge.astro";
-import TextCard from "../textCard.astro";
-import { badges } from "../../mocks/badges";
-import { textDataAbout } from "../../mocks/textDataAbout";
+import CoreValuesSection from "../CoreValuesSection.astro"
 ---
 
 <!-- Seccion principal del about -->
 <section id="about">
   <CardAbout />
+  <CoreValuesSection />
+  <Carrusel />
 </section>
 
-<!-- Vision y Mision -->
-<section
-  class="bg-primary px-5 py-10 flex flex-col gap-8 overflow-hidden
-  xlg:px-[80px] xlg:py-14 xlg:items-start xlg:gap-6
-  xxl:px-[140px] xxl:py-20 xxl:items-start xxl:gap-8"
->
-  <!-- Contenedor misión/visión -->
-  <div
-    class="text-center flex flex-col xlg:flex-row xlg:gap-6 xxl:gap-8
-    xlg:text-start xxl:text-start"
-  >
-    {textDataAbout.map((card) => <TextCard {...card} />)}
-  </div>
-
-  <!-- Badges -->
-  <div class="flex flex-col gap-8 xlg:gap-6">
-    <h2
-      class="text-white text-2xl font-extrabold tracking-wide text-center
-      xlg:text-start xxl:text-start"
-    >
-      VALORES
-    </h2>
-    <div class="flex flex-wrap justify-center gap-6 items-center">
-      {badges.map((label) => <Badge label={label} />)}
-    </div>
-  </div>
-</section>
-
-<!-- componente Carrusel -->
-<Carrusel />
