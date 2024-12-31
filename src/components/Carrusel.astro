@@ -1,38 +1,6 @@
 ---
 import "swiper/swiper-bundle.css";
-import slider1 from "/src/assets/slider/slider-1.jpg";
-import slider2 from "/src/assets/slider/slider-2.jpg";
-import slider3 from "/src/assets/slider/slider-3.jpg";
-import slider4 from "/src/assets/slider/slider-4.jpg";
-import slider5 from "/src/assets/slider/slider-5.jpg";
-
-const data = [
-    {
-        src: slider1.src,  
-        title: "Organización de jardín en Olavarría.",
-        alt: "Imagen 1",
-    },
-    {
-        src: slider2.src,  
-        title: "Organización de jardín en Piedritas.",
-        alt: "Imagen 2",
-    },
-    {
-        src: slider3.src,  
-        title: "Servicio de polinización.",
-        alt: "Imagen 3",
-    },
-    {
-        src: slider4.src,  
-        title: "Organización de jardín en Piedritas.",
-        alt: "Imagen 4",
-    },
-    {
-        src: slider5.src,  
-        title: "Muro verde en Villa Elisa.",
-        alt: "Imagen 5",
-    },
-];
+import { carouselData } from '../mocks/carouselData'; 
 ---
 <section class="swiper-container px-5 py-10 justify-start items-start gap-8 xlg:px-[80px] xlg:py-20 xlg:flex-col xlg:justify-start xlg:items-start xlg:gap-8 xxl:px-[140px] xxl:py-20 xxl:flex-col xxl:justify-start xxl:items-start xxl:gap-8">
     <h2 class="self-stretch text-primary text-2xl font-extrabold font-['Manrope'] uppercase tracking-[4.08px] mb-8">
@@ -40,7 +8,7 @@ const data = [
     </h2>
 
     <div class="swiper-wrapper xlg:h-[420px] h-[575px] justify-start items-center gap-8 inline-flex">
-        {data.map((item) => (
+        {carouselData.map((item) => (
             <div class="swiper-slide min-w-max xlg:h-[420px] h-[575px] justify-center items-center inline-flex" >
                 <img
                     src={item.src}
