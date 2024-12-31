@@ -3,7 +3,7 @@ import CardAbout from "../CardAbout.astro";
 import Carrusel from "../Carrusel.astro";
 import Badge from "../Badge.astro";
 import TextCard from "../textCard.astro";
-import { badges } from '../../mocks/badges';
+import { badges } from "../../mocks/badges";
 import { textDataAbout } from "../../mocks/textDataAbout";
 ---
 
@@ -15,7 +15,7 @@ import { textDataAbout } from "../../mocks/textDataAbout";
 <!-- Vision y Mision -->
 <section
   class="bg-primary px-5 py-10 flex flex-col gap-8 overflow-hidden
-  xlg:px-[80px] xlg:py-14 xlg:items-start xlg:gap-6 
+  xlg:px-[80px] xlg:py-14 xlg:items-start xlg:gap-6
   xxl:px-[140px] xxl:py-20 xxl:items-start xxl:gap-8"
 >
   <!-- Contenedor misión/visión -->
@@ -23,9 +23,7 @@ import { textDataAbout } from "../../mocks/textDataAbout";
     class="text-center flex flex-col xlg:flex-row xlg:gap-6 xxl:gap-8
     xlg:text-start xxl:text-start"
   >
-    {textDataAbout.map((card) => (
-      <TextCard {...card} />
-    ))}
+    {textDataAbout.map((card) => <TextCard {...card} />)}
   </div>
 
   <!-- Badges -->
@@ -42,9 +40,6 @@ import { textDataAbout } from "../../mocks/textDataAbout";
   </div>
 </section>
 
-<!-- Carrusel -->
-<section>
-  <div class="relative overflow-hidden">
-    <Carrusel />
-  </div>
-</section>
+<!-- componente Carrusel -->
+<Carrusel />
+ 
