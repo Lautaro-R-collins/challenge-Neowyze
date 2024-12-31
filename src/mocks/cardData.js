@@ -28,7 +28,7 @@ const cardData = [
     {
         title: "Terrazas verdes > DISEÑO Y MANTENIMIENTO",
         text: "Las terrazas, sobre todo en grandes urbanizaciones como Buenos Aires, suelen ser espacios comunes desaprovechados. Una terraza verde, además de sus muchos beneficios en cuanto al ecosistema, es una solución que da vida, incorpora vanguardia y pone en valor al espacio para el descanso, la sociabilización y la conexión de los habitantes con la naturaleza y su biodiversidad, transformando un espacio desaprovechado en un punto de encuentro para compartir, con beneficios recreativos, estéticos, ambientales y sociales.",
-        boldText:"En VERBENAS nuestros especialistas te pueden brindar distintas soluciones para generar de tu terraza o patio urbano, un espacio verde disfrutable.",
+        boldText: "En VERBENAS nuestros especialistas te pueden brindar distintas soluciones para generar de tu terraza o patio urbano, un espacio verde disfrutable.",
         mobileImage: MobileSer2.src,
         desktopImage: DesktopSer2.src,
         altText: "Diseño de exteriores",
@@ -48,7 +48,7 @@ const cardData = [
     {
         title: "INTERIORES > DISEÑO Y MANTENIMIENTO",
         text: "Ofrecemos asesoramiento e ideas para mejorar y decorar sus espacios interiores, a través de la colocación de elementos naturales, ocupándonos del suministro de todos los materiales necesarios, adecuándonos al espacio y a sus requerimientos. Los espacios interiores pueden mejorar con una decoración adecuada. Únicamente con  la colocación de elementos naturales podemos cambiar la estética y el entorno de un espacio interior, mejorando el bienestar ambiental del entorno. A través de nuestro servicio de mantenimiento nos aseguramos que cada planta reciba la atención y el cuidado necesarios para que conserven el mejor aspecto durante todo el año. Nuestro equipo de jardineros profesionales cuenta con el conocimiento y experiencia para cubrir todos  los requerimientos y características específicas de cada especie.",
-        boldText:"Ofrecemos asesoramiento e ideas para mejorar y decorar sus espacios interiores, a través de la colocación de elementos naturales.",
+        boldText: "Ofrecemos asesoramiento e ideas para mejorar y decorar sus espacios interiores, a través de la colocación de elementos naturales.",
         mobileImage: MobileSer4.src,
         desktopImage: DesktopSer4.src,
         altText: "Diseño de interiores",

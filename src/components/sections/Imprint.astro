@@ -19,21 +19,15 @@ import bannerDesktop from "../../assets/Desktop-img/banner-DESKTOP.jpg";
         IMPRONTA
     </h1>
 
-    {textCards.slice(0, 2).map((card) => (
-        <TextCard {...card} />
-    ))}
+    {textCards.slice(0, 2).map((card) => <TextCard {...card} />)}
 </section>
 
 <!-- banner separacion -->
-<div >
+<div>
     <picture>
         <source srcset={bannerMobile.src} media="(max-width: 500px)" />
         <source srcset={bannerDesktop.src} media="(min-width: 501px)" />
-        <img
-            src={bannerDesktop.src}
-            class="w-full h-[400px] "
-            alt="Banner"
-        />
+        <img src={bannerDesktop.src} class="w-full h-[400px]" alt="Banner" />
     </picture>
 </div>
 
@@ -43,11 +37,13 @@ import bannerDesktop from "../../assets/Desktop-img/banner-DESKTOP.jpg";
     xlg:text-start xlg:grid-cols-2 xlg:px-[80px]
     xxl:text-start xxl:grid-cols-2 xxl:px-[140px] gap-[30px]"
 >
-    {textCards.slice(2, 4).map((card) => (
-        <div class="flex flex-col">
-            <TextCard {...card} />
-        </div>
-    ))}
+    {
+        textCards.slice(2, 4).map((card) => (
+            <div class="flex flex-col">
+                <TextCard {...card} />
+            </div>
+        ))
+    }
 </section>
 
 <!-- Banguardia/Biodiversidad -->
@@ -55,11 +51,13 @@ import bannerDesktop from "../../assets/Desktop-img/banner-DESKTOP.jpg";
     class="grid grid-cols-1 px-5 py-10 text-center xxl:grid-cols-2 xxl:px-[140px] gap-[30px] bg-primary
     xlg:grid-cols-2 xlg:px-[100px]"
 >
-    {textCards.slice(4).map((card) => (
-        <div class="flex flex-col xxl:text-start xlg:text-start gap-8">
-            <TextCard {...card} />
-        </div>
-    ))}
+    {
+        textCards.slice(4).map((card) => (
+            <div class="flex flex-col xxl:text-start xlg:text-start gap-8">
+                <TextCard {...card} />
+            </div>
+        ))
+    }
 </section>
 
 <div class="bg-white py-[30px]"></div>

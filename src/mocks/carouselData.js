@@ -6,27 +6,27 @@ import slider5 from "/src/assets/slider/slider-5.jpg";
 
 const carouselData = [
     {
-        src: slider1.src,  
+        src: slider1.src,
         title: "Organización de jardín en Olavarría.",
         alt: "Imagen 1",
     },
     {
-        src: slider2.src,  
+        src: slider2.src,
         title: "Organización de jardín en Piedritas.",
         alt: "Imagen 2",
     },
     {
-        src: slider3.src,  
+        src: slider3.src,
         title: "Servicio de polinización.",
         alt: "Imagen 3",
     },
     {
-        src: slider4.src,  
+        src: slider4.src,
         title: "Organización de jardín en Piedritas.",
         alt: "Imagen 4",
     },
     {
-        src: slider5.src,  
+        src: slider5.src,
         title: "Muro verde en Villa Elisa.",
         alt: "Imagen 5",
     },
