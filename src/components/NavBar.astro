@@ -1,7 +1,6 @@
 ---
 import MenuIconClose from "../assets/Icons/MenuIconClose.astro";
 import MenuIconOpen from "../assets/Icons/MenuIconOpen.astro";
-import logo from "../assets/logo-verbena-white.png";
 
 const navLinks = [
   { href: "#about", text: "Nosotros" },
@@ -12,17 +11,18 @@ const navLinks = [
 ---
 
 <nav
-  class="xlg:origin-top-left xlg:bg-gradient-to-r xlg:backdrop-blur-md
-xlg:shadow-lg xlg:rounded-[30px] xlg:w-[calc(100%-400px)] xlg:h-[60px] xlg:items-center
-xlg:px-[20px] xlg:py-[12px] xlg:justify-between xlg:mt-[30px]
-hidden sm:flex md:flex fixed z-50 top-7 left-1/2 transform -translate-x-1/2 gap-12
-origin-top-left bg-gradient-to-r from-white to-[#edf0d9] backdrop-blur-md shadow-lg
-rounded-[40px] w-[calc(100%-580px)] h-16 items-center px-[30px] py-[10px] justify-between
-mt-[40px]"
+  class="hidden md:flex fixed z-50 top-7 left-1/2 transform -translate-x-1/2 gap-12
+  origin-top-left bg-gradient-to-r from-white to-[#edf0d9] backdrop-blur-md shadow-lg
+  rounded-[40px] w-[calc(100%-200px)] xlg:w-[calc(100%-580px)] h-16 items-center px-[30px] py-[10px] justify-between
+  mt-[40px] xlg:mx-0"
 >
   <div>
     <a href="/">
-      <img src={logo.src} alt="logo" class="w-auto h-[53px]" />
+      <img
+        src="/src/assets/logo-verbena-white.png"
+        alt="logo"
+        class="w-auto h-[53px]"
+      />
     </a>
   </div>
 
@@ -40,22 +40,22 @@ mt-[40px]"
   </div>
 </nav>
 
-<!-- menu hamburguesa -->
+<!-- menu amburguesa -->
 
 <button
   id="menu-toggle"
-  class="fixed top-4 left-4 font-bold py-2 px-4 block sm:hidden md:hidden"
+  class="fixed top-4 left-4 font-bold py-2 px-4 block md:hidden"
 >
   <MenuIconOpen />
 </button>
 
 <div
   id="mobile-menu"
-  class="hidden fixed inset-0 z-40 flex flex-col items-center justify-center bg-gradient-to-r from-white to-[#edf0d9]"
+  class="hidden fixed inset-0 z-40 sm:hidden flex-col items-center justify-center bg-gradient-to-r from-white to-[#edf0d9]"
 >
   <button
     id="close-menu"
-    class="absolute top-4 right-4 text-secondary font-bold py-2 px-4"
+    class="absolute top-4 right-4 text-secondary font-bold py-2 px-4 "
   >
     <MenuIconClose />
   </button>
@@ -64,12 +64,18 @@ mt-[40px]"
     {
       navLinks.map((link) => (
         <li>
-          <a href={link.href}>{link.text}</a>
+          <a href={link.href}>
+            {link.text}
+          </a>
         </li>
       ))
     }
   </ul>
-  <img src={logo.src} alt="Logo" class="mt-12 w-[150px] h-auto" />
+  <img
+    src="/src/assets/logo-verbena-white.png"
+    alt="Logo"
+    class="mt-12 w-[150px] h-auto"
+  />
 </div>
 
 <script>
@@ -81,12 +87,14 @@ mt-[40px]"
   if (toggleButton && mobileMenu) {
     toggleButton.addEventListener("click", () => {
       mobileMenu.classList.remove("hidden");
+      mobileMenu.classList.add("flex");
     });
   }
 
   if (closeMenuButton && mobileMenu) {
     closeMenuButton.addEventListener("click", () => {
       mobileMenu.classList.add("hidden");
+      mobileMenu.classList.remove("flex");
     });
   }
 
@@ -94,6 +102,7 @@ mt-[40px]"
     menuLinks.forEach((link) => {
       link.addEventListener("click", () => {
         mobileMenu.classList.add("hidden");
+        mobileMenu.classList.remove("flex");
       });
     });
   }
