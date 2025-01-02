@@ -1,6 +1,7 @@
 ---
 import MenuIconClose from "../assets/Icons/MenuIconClose.astro";
 import MenuIconOpen from "../assets/Icons/MenuIconOpen.astro";
+import Logo from "../assets/logo-verbena-white.png";
 
 const navLinks = [
   { href: "#about", text: "Nosotros" },
@@ -19,7 +20,7 @@ const navLinks = [
   <div>
     <a href="/">
       <img
-        src="/src/assets/logo-verbena-white.png"
+        src={Logo.src}
         alt="logo"
         class="w-auto h-[53px]"
       />
@@ -72,7 +73,7 @@ const navLinks = [
     }
   </ul>
   <img
-    src="/src/assets/logo-verbena-white.png"
+    src={Logo.src}
     alt="Logo"
     class="mt-12 w-[150px] h-auto"
   />
