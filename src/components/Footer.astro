@@ -1,10 +1,12 @@
 ---
 import { socialIcons, links } from "../mocks/footerData";
+import Monstera from "/src/assets/vectors/Monstera 1.svg"
+import Fern from "/src/assets/vectors/fern-part.svg"
 ---
 
 <footer
   id="contact"
-  class="px-8 py-[74px] bg-primary flex flex-col justify-center items-center gap-6 overflow-hidden"
+  class="px-8 py-[74px] bg-primary flex flex-col justify-center items-center gap-6 relative overflow-hidden"
 >
   <h2
     class="text-center text-white text-2xl font-extrabold font-['Manrope'] leading-[44.80px]"
@@ -36,19 +38,19 @@ import { socialIcons, links } from "../mocks/footerData";
       ))
     }
   </div>
-  <!-- <img
-    src="/src/assets/vectors/monstera 1.svg"
+  <img
+    src={Monstera.src}
     alt="monstera"
-    class="absolute -z-1 w-[312px] xxl:-ml-[1550px] xxl:mt-[120px] xlg:-ml-[1050px] xlg:mt-[50px]
-        -ml-[75px] mt-[40px] opacity-40 xxl:opacity-80 xlg:opacity-80"
+    class="absolute -z-1 w-[312px] mr-auto ml-auto xxl:-ml-[1550px] xxl:mt-[50px] xlg:-ml-[1050px] xlg:bottom-0
+         bottom-0 opacity-40 xxl:opacity-80 xlg:opacity-80"
   />
   <img
-    src="/src/assets/vectors/fern-part.svg"
+    src={Fern.src}
     alt="fern"
     class="absolute -z-1 w-[312px] opacity-40 mt-[40px] -ml-[75px]
     hidden xxl:block xlg:block
-    xxl:ml-[1550px] xxl:mt-[120px] 
-    xlg:ml-[1050px] xlg:mt-[80px]
+    xxl:ml-[1550px] xxl:bottom-0
+    xlg:ml-[1050px] xlg:bottom-0
     xxl:opacity-80 xlg:opacity-80"
-  /> -->
+  />
 </footer>

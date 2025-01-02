@@ -3,16 +3,21 @@ import Badge from "./Badge.astro";
 import TextCard from "./textCard.astro";
 import { badges } from "../mocks/badges";
 import { textDataAbout } from "../mocks/textDataAbout";
+import Monstera from "/src/assets/vectors/monstera-white.svg"
+import Fern from "/src/assets/vectors/fern-white.svg"
 ---
 
+<!-- En el contenedor principal para ver las imágenes de plantas poner relative y overflow-hidden -->
+
 <section
-  class="bg-primary px-5 py-10 flex flex-col gap-8 overflow-hidden
+  class="bg-primary px-5 py-10 flex flex-col gap-8
   xlg:px-[80px] xlg:py-14 xlg:items-start xlg:gap-6
-  xxl:px-[140px] xxl:py-20 xxl:items-start xxl:gap-8"
+  xxl:px-[140px] xxl:py-20 xxl:items-start xxl:gap-8 relative overflow-hidden" 
 >
+<img src={Monstera.src} class="absolute rotate-180 -z-1 w-[524px] mx-auto sm:mx-0 -top-[262px] sm:left-[116px]"/>
   <!-- Contenedor misión/visión -->
   <div
-    class="text-center flex flex-col xlg:flex-row xlg:gap-6 xxl:gap-8
+    class="text-center grid grid-cols-1 gap-6 xlg:grid-cols-2 xlg:gap-6 xxl:gap-8
     xlg:text-start xxl:text-start"
   >
     {textDataAbout.map((card) => <TextCard {...card} />)}
@@ -30,4 +35,5 @@ import { textDataAbout } from "../mocks/textDataAbout";
       {badges.map((label) => <Badge label={label} />)}
     </div>
   </div>
+  <img src={Fern.src} class="absolute -z-1 w-[498px] mx-auto sm:mx-0 -bottom-[300px] sm:-bottom-[50px] sm:right-[116px]"/>
 </section>
