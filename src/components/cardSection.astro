@@ -2,6 +2,7 @@
 import type { ImageMetadata } from "astro";
 import { getImage } from "astro:assets";
 
+
 export interface Props {
   title: string;
   text: string;
@@ -31,16 +32,17 @@ const {
 } = Astro.props;
 
 const MobileImage = await getImage({
-    src: mobileImage,
-    width: 400,
-    height: 200,
+  src: mobileImage,
+  width: 400,
+  height: 200,
 });
 
 const DesktopImg = await getImage({
-    src: desktopImage,
-    width: 400,
-    height: 400,
-}); 
+  src: desktopImage,
+  width: 400,
+  height: 400,
+});
+
 ---
 
 <section
@@ -84,7 +86,7 @@ const DesktopImg = await getImage({
       <img
         src={plantSrc}
         alt="Vector decorativo"
-        class="absolute w-[498px] -left-[249px] -z-2 top-[80px]"
+        class="absolute w-[498px] -left-[249px] -z- top-[80px]"
       />
     )
   }

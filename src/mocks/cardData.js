@@ -11,8 +11,8 @@ import DesktopSer3 from "../assets/servicios.img/desktop-servicios-3.jpg";
 import DesktopSer4 from "../assets/servicios.img/desktop-servicios-4.jpg";
 import DesktopSer5 from "../assets/servicios.img/desktop-servicios-5.jpg";
 // imagenes SVG de fondo
-import Monstera from "/src/assets/vectors/monstera-white.svg";
-import Fern from "/src/assets/vectors/fern-white.svg";
+import Monstera from "../assets/vectors/monstera-white.svg";
+import Fern from "../assets/vectors/fern-white.svg";
 
 
 
@@ -37,7 +37,7 @@ const cardData = [
         desktopImage: DesktopSer2,
         altText: "Diseño de terrazas verdes",
         isReversed: true,
-        plantSrc: Fern,
+        plantSrc: Fern.src,
     },
     {
         title: "Muros verdes y Jardines verticales > DISEÑO y MANTENIMIENTO",
@@ -58,7 +58,7 @@ const cardData = [
         desktopImage: DesktopSer4,
         altText: "Diseño de interiores",
         isReversed: true,
-        plantSrc: Monstera,
+        plantSrc: Monstera.src,
     },
     {
         title: "Huertas > VERBENAS",
